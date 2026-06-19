@@ -1,0 +1,19 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import LinkCard from '../../components/LinkCard.astro';
+
+const links = await getCollection('links');
+links.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<Base title="Links">
+  <div class="mb-8">
+    <h1 class="text-2xl font-bold text-stone-900 mb-1">Links</h1>
+    <p class="text-stone-400 text-sm">Individual articles, videos, and posts worth reading.</p>
+  </div>
+
+  <div>
+    {links.map(l => <LinkCard link={l} />)}
+  </div>
+</Base>

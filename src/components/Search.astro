@@ -1,0 +1,22 @@
+---
+// Pagefind search — only active after `npm run build`
+---
+<div id="search" class="mb-8"></div>
+<script is:inline>
+  window.addEventListener('DOMContentLoaded', function () {
+    fetch('/ril/pagefind/pagefind-ui.js')
+      .then(function (r) {
+        if (!r.ok) throw new Error('not built yet');
+        var s = document.createElement('script');
+        s.src = '/ril/pagefind/pagefind-ui.js';
+        s.onload = function () {
+          new PagefindUI({ element: '#search', showImages: false, resetStyles: false });
+        };
+        document.head.appendChild(s);
+      })
+      .catch(function () {
+        var el = document.getElementById('search');
+        if (el) el.innerHTML = '<p class="text-sm text-stone-400 italic">Search available after <code class=\"font-mono\">npm run build</code></p>';
+      });
+  });
+</script>

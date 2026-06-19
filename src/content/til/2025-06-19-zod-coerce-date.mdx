@@ -1,0 +1,9 @@
+---
+title: z.coerce.date() handles YAML date strings automatically
+date: 2025-06-19
+tags: [typescript, zod, astro]
+source_url: https://zod.dev
+source_title: Zod docs
+---
+
+YAML parses `2025-06-19` as a string, not a `Date`. Zod's `z.coerce.date()` converts it automatically — no manual `new Date()` needed. Works great in Astro content collection schemas where you want to call `.toLocaleDateString()` directly on the value.

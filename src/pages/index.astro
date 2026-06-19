@@ -1,0 +1,57 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import ResourceCard from '../components/ResourceCard.astro';
+import LinkCard from '../components/LinkCard.astro';
+import TilCard from '../components/TilCard.astro';
+import Search from '../components/Search.astro';
+
+const resources = await getCollection('resources');
+const links = await getCollection('links');
+const tils = await getCollection('til');
+
+type FeedItem =
+  | { kind: 'resource'; date: Date; entry: (typeof resources)[0] }
+  | { kind: 'link'; date: Date; entry: (typeof links)[0] }
+  | { kind: 'til'; date: Date; entry: (typeof tils)[0] };
+
+const feed: FeedItem[] = [
+  ...resources.map(r => ({ kind: 'resource' as const, date: r.data.added, entry: r })),
+  ...links.map(l => ({ kind: 'link' as const, date: l.data.date, entry: l })),
+  ...tils.map(t => ({ kind: 'til' as const, date: t.data.date, entry: t })),
+].sort((a, b) => b.date.getTime() - a.date.getTime());
+
+const allTags = [...new Set([
+  ...resources.flatMap(r => r.data.tags),
+  ...links.flatMap(l => l.data.tags),
+  ...tils.flatMap(t => t.data.tags),
+])].sort();
+---
+
+<Base>
+  <div class="mb-8">
+    <h1 class="text-2xl font-bold text-stone-900 mb-1">Resources I Love</h1>
+    <p class="text-stone-400 text-sm">sam's view of the internet — links, reads, and quick learnings worth sharing.</p>
+  </div>
+
+  <Search />
+
+  <div class="flex flex-wrap gap-1.5 mb-10">
+    {allTags.map(tag => (
+      <a
+        href={`/ril/tags/${tag}`}
+        class="px-2.5 py-1 rounded-full text-xs bg-stone-100 text-stone-500 hover:bg-amber-100 hover:text-amber-700 transition-colors"
+      >
+        #{tag}
+      </a>
+    ))}
+  </div>
+
+  <div>
+    {feed.map(item => {
+      if (item.kind === 'resource') return <div class="mb-4"><ResourceCard resource={item.entry} /></div>;
+      if (item.kind === 'link') return <LinkCard link={item.entry} />;
+      if (item.kind === 'til') return <TilCard entry={item.entry} />;
+    })}
+  </div>
+</Base>

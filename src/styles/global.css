@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@layer base {
+  .pagefind-ui {
+    --pagefind-ui-primary: #d97706;
+    --pagefind-ui-font: system-ui, -apple-system, sans-serif;
+    --pagefind-ui-border-radius: 0.5rem;
+  }
+}

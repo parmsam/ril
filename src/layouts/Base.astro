@@ -1,0 +1,59 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'RIL',
+  description = 'Resources I Love — a curated feed of links, resources, and learnings.',
+} = Astro.props;
+
+const pageTitle = title === 'RIL' ? 'RIL' : `${title} · RIL`;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/ril/favicon.svg" />
+    <link rel="alternate" type="application/rss+xml" title="RIL Feed" href="/ril/feed.xml" />
+    <link href="/ril/pagefind/pagefind-ui.css" rel="stylesheet" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    <title>{pageTitle}</title>
+  </head>
+  <body class="bg-stone-50 text-stone-900 min-h-screen font-sans antialiased">
+    <header class="border-b border-stone-200 bg-white sticky top-0 z-10">
+      <div class="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between">
+        <a href="/ril" class="font-semibold text-base tracking-tight hover:text-amber-600 transition-colors">
+          RIL <span class="text-stone-400 font-normal text-sm">resources i love</span>
+        </a>
+        <nav class="flex gap-5 text-sm text-stone-500">
+          <a href="/ril/resources" class="hover:text-stone-900 transition-colors">resources</a>
+          <a href="/ril/links" class="hover:text-stone-900 transition-colors">links</a>
+          <a href="/ril/til" class="hover:text-stone-900 transition-colors">til</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="max-w-3xl mx-auto px-4 py-10" data-pagefind-body>
+      <slot />
+    </main>
+
+    <footer class="border-t border-stone-200 mt-16">
+      <div class="max-w-3xl mx-auto px-4 py-6 flex items-center justify-between text-xs text-stone-400">
+        <span>sam's view of the internet</span>
+        <div class="flex gap-4">
+          <a href="/ril/feed.xml" class="hover:text-stone-600 transition-colors">rss</a>
+          <a href="https://github.com/parmsam/ril" class="hover:text-stone-600 transition-colors">source</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

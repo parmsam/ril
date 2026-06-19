@@ -1,0 +1,8 @@
+title: "Thinking Out Loud: How Chain-of-Thought Changes LLM Behavior"
+url: https://simonwillison.net/2023/Jun/8/gpt-tokenizers/
+description: How giving language models space to reason step-by-step before answering dramatically improves output quality — and why it works.
+type: article
+tags: [ai, llm, prompting]
+date: 2025-06-19
+note: The interactive demos make it click in a way that reading the paper doesn't.
+resource: simon-willison-blog
