@@ -1,0 +1,8 @@
+title: "What is an agent?"
+url: https://tidydesign.substack.com/p/what-is-an-agent
+description: Hadley Wickham builds up the definition of an agent from first principles — conversations, turns, tools, harnesses — landing on "an LLM in a harness that calls tools repeatedly in a loop." A clear technical explainer for a term that's everywhere but rarely unpacked.
+type: post
+tags: [ai, agents, r, llm, data-science]
+date: 2026-06-05
+resource: hadley-wickham-substack
+note: Great bottom-up explainer. Hadley's definition ("LLM in a harness, calling tools in a loop") is more detailed than Simon Willison's earlier "runs tools in a loop to achieve a goal" (https://simonwillison.net/2025/Sep/18/agents/) — interesting to see how the concept has accumulated vocabulary as the field matures.
