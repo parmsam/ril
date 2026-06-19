@@ -1,0 +1,7 @@
+title: "Your LLM can't math (and that's ok)"
+url: https://tidydesign.substack.com/p/your-llm-cant-math-and-thats-ok
+description: Hadley Wickham refines the agent definition by clarifying that tools run in the harness, not the model — and uses math as the concrete example. LLMs are confidently wrong at arithmetic, but harnesses can supply a calculator tool. Also covers how web chat harnesses quietly provide web search, page fetch, memory, and image generation.
+type: post
+tags: [ai, llm, r, agents, tools]
+date: 2026-06-12
+resource: hadley-wickham-substack

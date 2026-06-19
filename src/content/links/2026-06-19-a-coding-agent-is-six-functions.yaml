@@ -1,0 +1,7 @@
+title: "A coding agent is six functions in a trenchcoat"
+url: https://tidydesign.substack.com/p/a-coding-agent-is-six-functions-in
+description: Hadley Wickham demystifies coding agents (Claude Code, Cursor, Codex) by building a minimal one in R with ellmer. The core is just six tools — read file, write file, edit file, list files, search, run command — plus a system prompt. Also covers path safety and why a targeted edit tool beats full file rewrites.
+type: post
+tags: [ai, agents, r, coding, tools, llm]
+date: 2026-06-19
+resource: hadley-wickham-substack
