@@ -1,10 +1,20 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+/* class-based dark mode — toggled on <html> */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer base {
   .pagefind-ui {
     --pagefind-ui-primary: #d97706;
     --pagefind-ui-font: system-ui, -apple-system, sans-serif;
     --pagefind-ui-border-radius: 0.5rem;
+  }
+
+  .dark .pagefind-ui {
+    --pagefind-ui-background: #1c1917;
+    --pagefind-ui-text: #e7e5e4;
+    --pagefind-ui-border: #44403c;
+    --pagefind-ui-tag: #292524;
   }
 }

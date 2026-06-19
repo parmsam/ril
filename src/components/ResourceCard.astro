@@ -10,19 +10,19 @@ const { resource } = Astro.props;
 const { title, url, description, type, tags, status, note } = resource.data;
 ---
 
-<article class="group p-4 rounded-lg border border-stone-200 bg-white hover:border-amber-300 hover:shadow-sm transition-all">
+<article class="group p-4 rounded-lg border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 hover:border-amber-300 dark:hover:border-amber-700 hover:shadow-sm transition-all">
   <div class="flex items-center gap-2 mb-2">
     <TypeBadge type={type} />
     {status === 'archived' && (
-      <span class="text-xs text-stone-400 italic">archived</span>
+      <span class="text-xs text-stone-400 dark:text-stone-500 italic">archived</span>
     )}
   </div>
   <a href={url} target="_blank" rel="noopener noreferrer">
-    <h2 class="font-semibold text-stone-900 group-hover:text-amber-700 transition-colors mb-1 leading-snug">{title}</h2>
+    <h2 class="font-semibold text-stone-900 dark:text-stone-100 group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors mb-1 leading-snug">{title}</h2>
   </a>
-  <p class="text-sm text-stone-500 leading-relaxed mb-3">{description}</p>
+  <p class="text-sm text-stone-500 dark:text-stone-400 leading-relaxed mb-3">{description}</p>
   {note && (
-    <p class="text-sm text-stone-400 italic border-l-2 border-amber-200 pl-3 mb-3">{note}</p>
+    <p class="text-sm text-stone-400 dark:text-stone-500 italic border-l-2 border-amber-200 dark:border-amber-800 pl-3 mb-3">{note}</p>
   )}
   <div class="flex flex-wrap gap-1">
     {tags.map(tag => <TagPill tag={tag} href={`/ril/tags/${tag}`} />)}

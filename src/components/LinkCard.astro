@@ -12,18 +12,18 @@ const { title, url, description, type, tags, date, note } = link.data;
 const dateStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 ---
 
-<article class="group flex gap-4 py-4 border-b border-stone-100 last:border-0">
-  <time class="flex-shrink-0 text-xs text-stone-400 pt-0.5 w-24 text-right tabular-nums">{dateStr}</time>
+<article class="group flex gap-4 py-4 border-b border-stone-100 dark:border-stone-800 last:border-0">
+  <time class="flex-shrink-0 text-xs text-stone-400 dark:text-stone-500 pt-0.5 w-24 text-right tabular-nums">{dateStr}</time>
   <div class="flex-1 min-w-0">
     <div class="mb-1">
       <TypeBadge type={type} />
     </div>
     <a href={url} target="_blank" rel="noopener noreferrer">
-      <h2 class="font-medium text-stone-900 hover:text-amber-700 transition-colors mb-1 leading-snug">{title}</h2>
+      <h2 class="font-medium text-stone-900 dark:text-stone-100 hover:text-amber-700 dark:hover:text-amber-400 transition-colors mb-1 leading-snug">{title}</h2>
     </a>
-    <p class="text-sm text-stone-500 leading-relaxed mb-2">{description}</p>
+    <p class="text-sm text-stone-500 dark:text-stone-400 leading-relaxed mb-2">{description}</p>
     {note && (
-      <p class="text-sm text-stone-400 italic border-l-2 border-amber-200 pl-3 mb-2">{note}</p>
+      <p class="text-sm text-stone-400 dark:text-stone-500 italic border-l-2 border-amber-200 dark:border-amber-800 pl-3 mb-2">{note}</p>
     )}
     <div class="flex flex-wrap gap-1">
       {tags.map(tag => <TagPill tag={tag} href={`/ril/tags/${tag}`} />)}

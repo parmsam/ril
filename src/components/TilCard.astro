@@ -11,18 +11,18 @@ const { title, date, tags, source_url, source_title } = entry.data;
 const dateStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 ---
 
-<article class="group flex gap-4 py-4 border-b border-stone-100 last:border-0">
-  <time class="flex-shrink-0 text-xs text-stone-400 pt-0.5 w-24 text-right tabular-nums">{dateStr}</time>
+<article class="group flex gap-4 py-4 border-b border-stone-100 dark:border-stone-800 last:border-0">
+  <time class="flex-shrink-0 text-xs text-stone-400 dark:text-stone-500 pt-0.5 w-24 text-right tabular-nums">{dateStr}</time>
   <div class="flex-1 min-w-0">
     <div class="mb-1">
-      <span class="inline-block px-1.5 py-0.5 rounded text-xs font-medium bg-amber-50 text-amber-600">TIL</span>
+      <span class="inline-block px-1.5 py-0.5 rounded text-xs font-medium bg-amber-50 dark:bg-amber-950 text-amber-600 dark:text-amber-400">TIL</span>
     </div>
     <a href={`/ril/til/${entry.slug}`}>
-      <h2 class="font-medium text-stone-900 hover:text-amber-700 transition-colors mb-1 leading-snug">{title}</h2>
+      <h2 class="font-medium text-stone-900 dark:text-stone-100 hover:text-amber-700 dark:hover:text-amber-400 transition-colors mb-1 leading-snug">{title}</h2>
     </a>
     {source_url && (
-      <p class="text-xs text-stone-400 mb-2">
-        via <a href={source_url} class="hover:text-stone-600 underline underline-offset-2 transition-colors" target="_blank" rel="noopener noreferrer">{source_title ?? source_url}</a>
+      <p class="text-xs text-stone-400 dark:text-stone-500 mb-2">
+        via <a href={source_url} class="hover:text-stone-600 dark:hover:text-stone-300 underline underline-offset-2 transition-colors" target="_blank" rel="noopener noreferrer">{source_title ?? source_url}</a>
       </p>
     )}
     <div class="flex flex-wrap gap-1">

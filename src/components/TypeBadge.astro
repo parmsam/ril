@@ -5,20 +5,20 @@ interface Props {
 const { type } = Astro.props;
 
 const colors: Record<string, string> = {
-  article:    'bg-blue-50 text-blue-600',
-  video:      'bg-red-50 text-red-600',
-  post:       'bg-green-50 text-green-600',
-  paper:      'bg-purple-50 text-purple-600',
-  thread:     'bg-orange-50 text-orange-600',
-  tool:       'bg-cyan-50 text-cyan-600',
-  blog:       'bg-green-50 text-green-600',
-  podcast:    'bg-violet-50 text-violet-600',
-  channel:    'bg-red-50 text-red-600',
-  newsletter: 'bg-blue-50 text-blue-600',
-  site:       'bg-stone-100 text-stone-500',
+  article:    'bg-blue-50 text-blue-600 dark:bg-blue-950 dark:text-blue-400',
+  video:      'bg-red-50 text-red-600 dark:bg-red-950 dark:text-red-400',
+  post:       'bg-green-50 text-green-600 dark:bg-green-950 dark:text-green-400',
+  paper:      'bg-purple-50 text-purple-600 dark:bg-purple-950 dark:text-purple-400',
+  thread:     'bg-orange-50 text-orange-600 dark:bg-orange-950 dark:text-orange-400',
+  tool:       'bg-cyan-50 text-cyan-600 dark:bg-cyan-950 dark:text-cyan-400',
+  blog:       'bg-green-50 text-green-600 dark:bg-green-950 dark:text-green-400',
+  podcast:    'bg-violet-50 text-violet-600 dark:bg-violet-950 dark:text-violet-400',
+  channel:    'bg-red-50 text-red-600 dark:bg-red-950 dark:text-red-400',
+  newsletter: 'bg-blue-50 text-blue-600 dark:bg-blue-950 dark:text-blue-400',
+  site:       'bg-stone-100 text-stone-500 dark:bg-stone-800 dark:text-stone-400',
 };
 
-const color = colors[type] ?? 'bg-stone-100 text-stone-500';
+const color = colors[type] ?? 'bg-stone-100 text-stone-500 dark:bg-stone-800 dark:text-stone-400';
 ---
 
 <span class={`inline-block px-1.5 py-0.5 rounded text-xs font-medium ${color}`}>

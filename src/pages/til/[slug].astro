@@ -24,7 +24,7 @@ const dateStr = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long
         <span class="inline-block px-1.5 py-0.5 rounded text-xs font-medium bg-amber-50 text-amber-600">TIL</span>
         <time class="text-sm text-stone-400">{dateStr}</time>
       </div>
-      <h1 class="text-2xl font-bold text-stone-900 mb-3 leading-snug">{title}</h1>
+      <h1 class="text-2xl font-bold text-stone-900 dark:text-stone-100 mb-3 leading-snug">{title}</h1>
       {source_url && (
         <p class="text-sm text-stone-400">
           via <a href={source_url} class="text-amber-600 hover:underline underline-offset-2 transition-colors" target="_blank" rel="noopener noreferrer">{source_title ?? source_url}</a>
@@ -32,11 +32,11 @@ const dateStr = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long
       )}
     </header>
 
-    <div class="prose prose-stone prose-sm max-w-none mb-8 prose-a:text-amber-600 prose-a:no-underline hover:prose-a:underline">
+    <div class="prose prose-stone dark:prose-invert prose-sm max-w-none mb-8 prose-a:text-amber-600 dark:prose-a:text-amber-400 prose-a:no-underline hover:prose-a:underline">
       <Content />
     </div>
 
-    <footer class="flex flex-wrap gap-1.5 pt-6 border-t border-stone-100">
+    <footer class="flex flex-wrap gap-1.5 pt-6 border-t border-stone-100 dark:border-stone-800">
       {tags.map(tag => <TagPill tag={tag} href={`/ril/tags/${tag}`} />)}
     </footer>
   </article>

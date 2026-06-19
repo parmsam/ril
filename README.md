@@ -35,6 +35,21 @@ TIL entries are intentionally terse — the point is the thing itself, not an es
 
 ---
 
+## Adding content with Claude Code
+
+This repo is designed to work with [Claude Code](https://claude.ai/code). The `.claude/skills/ril-add.md` skill lets you add new entries from inside your editor without touching YAML manually:
+
+```
+/ril-add <url>              # prompts for type
+/ril-add <url> --resource   # ongoing source (blog, podcast, channel)
+/ril-add <url> --link       # one-off content (article, video, post)
+/ril-add --til "title"      # short learning, no URL required
+```
+
+Claude fetches the page via [defuddle](https://defuddle.md) (falling back to Jina reader, then plain fetch), proposes a title, description, type, and tags, asks for confirmation, writes the file, and offers to commit — all in one step.
+
+---
+
 ## Adding content
 
 Use the Claude Code skill from inside this project:
