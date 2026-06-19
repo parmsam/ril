@@ -4,5 +4,5 @@ description: Why scaling up multi-agent AI systems doesn't deliver proportional 
 type: episode
 tags: [ai, ml, agents, research]
 date: 2026-06-08
-note: The 45% solo-task-performance threshold finding is the kind of concrete empirical result that actually changes how you think about multi-agent design.
+note: Loved the exploration of coordination cost — the idea that agents communicating and handing off work isn't free, and that overhead often swamps any gains from parallelism.
 resource: linear-digressions
