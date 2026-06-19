@@ -1,0 +1,8 @@
+title: "Many Agents, Many Problems (The Agents Season, Ep. 7)"
+url: https://lineardigressions.substack.com/p/many-agents-many-problems-the-agents
+description: Why scaling up multi-agent AI systems doesn't deliver proportional benefits — collaboration turns out to be a distinct capability, and adding agents to sequential tasks often makes things worse.
+type: episode
+tags: [ai, ml, agents, research]
+date: 2026-06-08
+note: The 45% solo-task-performance threshold finding is the kind of concrete empirical result that actually changes how you think about multi-agent design.
+resource: linear-digressions
