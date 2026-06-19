@@ -1,0 +1,13 @@
+---
+title: Agent coordination has a real cost that scales with task sequentiality
+date: 2026-06-19
+tags: [ai, agents, ml, research]
+source_url: https://lineardigressions.substack.com/p/many-agents-many-problems-the-agents
+source_title: Many Agents, Many Problems — Linear Digressions
+---
+
+Multi-agent systems feel like free parallelism but aren't. Every handoff between agents carries overhead — context passing, error propagation, and coordination logic — and that overhead compounds on sequential tasks where each step depends on the last.
+
+The research discussed in this episode found an empirical threshold around 45% solo task performance: below it, adding more agents actively hurts. The agents capable enough to collaborate usefully are already capable enough that the coordination tax eats the gains. For tasks with heavy tool use or tight dependencies, debate and discussion between agents made things *worse* — voting on independent attempts outperformed deliberation.
+
+The cleaner mental model: multiple agents earn their keep through *diversity of attempts*, not quality of interaction. If your task can be parallelized and the results aggregated, agents help. If it can't, you're just paying a coordination tax.
