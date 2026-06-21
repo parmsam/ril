@@ -20,7 +20,7 @@ export const GET: APIRoute = async ({ site }) => {
     ...links.map(l => ({
       title: l.data.title,
       url: l.data.url,
-      date: l.data.date,
+      date: l.data.added,
       description: l.data.description,
     })),
     ...tils.map(t => ({

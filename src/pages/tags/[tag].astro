@@ -20,7 +20,7 @@ export async function getStaticPaths() {
     params: { tag },
     props: {
       resources: resources.filter(r => r.data.tags.includes(tag)),
-      links: links.filter(l => l.data.tags.includes(tag)).sort((a, b) => b.data.date.getTime() - a.data.date.getTime()),
+      links: links.filter(l => l.data.tags.includes(tag)).sort((a, b) => b.data.added.getTime() - a.data.added.getTime()),
       tils: tils.filter(t => t.data.tags.includes(tag)).sort((a, b) => b.data.date.getTime() - a.data.date.getTime()),
     },
   }));

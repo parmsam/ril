@@ -4,7 +4,7 @@ import Base from '../../layouts/Base.astro';
 import LinkCard from '../../components/LinkCard.astro';
 
 const links = await getCollection('links');
-links.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+links.sort((a, b) => b.data.added.getTime() - a.data.added.getTime());
 ---
 
 <Base title="Links">

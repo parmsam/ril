@@ -6,3 +6,4 @@ tags: [ai, agents, r, llm, data-science]
 date: 2026-06-05
 resource: hadley-wickham-substack
 note: Great bottom-up explainer. Hadley's definition ("LLM in a harness, calling tools in a loop") is more detailed than Simon Willison's earlier "runs tools in a loop to achieve a goal" (https://simonwillison.net/2025/Sep/18/agents/) — interesting to see how the concept has accumulated vocabulary as the field matures.
+added: 2026-06-19

@@ -17,7 +17,7 @@ type FeedItem =
 
 const feed: FeedItem[] = [
   ...resources.map(r => ({ kind: 'resource' as const, date: r.data.added, entry: r })),
-  ...links.map(l => ({ kind: 'link' as const, date: l.data.date, entry: l })),
+  ...links.map(l => ({ kind: 'link' as const, date: l.data.added, entry: l })),
   ...tils.map(t => ({ kind: 'til' as const, date: t.data.date, entry: t })),
 ].sort((a, b) => b.date.getTime() - a.date.getTime());
 

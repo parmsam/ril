@@ -7,16 +7,18 @@ interface Props {
   link: CollectionEntry<'links'>;
 }
 const { link } = Astro.props;
-const { title, url, description, type, tags, date, note } = link.data;
+const { title, url, description, type, tags, date, added, note } = link.data;
 
-const dateStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+const addedStr = added.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+const pubStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 ---
 
 <article class="group flex gap-4 py-4 border-b border-stone-100 dark:border-stone-800 last:border-0">
-  <time class="flex-shrink-0 text-xs text-stone-400 dark:text-stone-500 pt-0.5 w-24 text-right tabular-nums">{dateStr}</time>
+  <time class="flex-shrink-0 text-xs text-stone-400 dark:text-stone-500 pt-0.5 w-24 text-right tabular-nums">{addedStr}</time>
   <div class="flex-1 min-w-0">
-    <div class="mb-1">
+    <div class="flex items-center gap-2 mb-1">
       <TypeBadge type={type} />
+      <span class="text-xs text-stone-400 dark:text-stone-500">pub. {pubStr}</span>
     </div>
     <a href={url} target="_blank" rel="noopener noreferrer">
       <h2 class="font-medium text-stone-900 dark:text-stone-100 hover:text-amber-700 dark:hover:text-amber-400 transition-colors mb-1 leading-snug">{title}</h2>

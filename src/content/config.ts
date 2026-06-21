@@ -23,6 +23,7 @@ const links = defineCollection({
     type: z.enum(['article', 'video', 'post', 'paper', 'thread', 'tool', 'episode']),
     tags: z.array(z.string()),
     date: z.coerce.date(),
+    added: z.coerce.date(),
     note: z.string().optional(),
     resource: z.string().optional(),
   }),

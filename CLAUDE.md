@@ -25,7 +25,8 @@ url: URL
 description: string        # 1–2 sentences
 type: article | video | post | paper | thread | tool | episode
 tags: [string]
-date: YYYY-MM-DD
+date: YYYY-MM-DD           # publication date (shown in card)
+added: YYYY-MM-DD          # date visited/saved (used for chronological sort)
 note: string               # optional personal take
 resource: slug             # optional — parent resource slug
 ```
