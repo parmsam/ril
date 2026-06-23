@@ -1,0 +1,8 @@
+title: "Agent Economics (The Agents Season, Episode 10)"
+url: https://lineardigressions.substack.com/p/agent-economics-the-agents-season
+description: Applies Jevons Paradox to AI inference — per-token costs dropped 1000x since 2022 but total spend is up 10x because usage exploded. The key insight is that agent costs grow quadratically with turns, not linearly, because each step feeds the full conversation history back as context.
+type: episode
+tags: [ai, agents, economics, llm, ml]
+date: 2026-06-22
+added: 2026-06-22
+resource: linear-digressions
