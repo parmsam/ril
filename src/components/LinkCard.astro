@@ -7,7 +7,7 @@ interface Props {
   link: CollectionEntry<'links'>;
 }
 const { link } = Astro.props;
-const { title, url, description, type, tags, date, added, note } = link.data;
+const { title, url, description, type, tags, date, added, note, ai_note } = link.data;
 
 const addedStr = added.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 const pubStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
@@ -25,7 +25,22 @@ const pubStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric'
     </a>
     <p class="text-sm text-stone-500 dark:text-stone-400 leading-relaxed mb-2">{description}</p>
     {note && (
-      <p class="text-sm text-stone-400 dark:text-stone-500 italic border-l-2 border-amber-200 dark:border-amber-800 pl-3 mb-2">{note}</p>
+      <p class="text-sm text-stone-400 dark:text-stone-500 italic border-l-2 border-amber-200 dark:border-amber-800 pl-3 mb-2">
+        {ai_note === false ? (
+          <span class="not-italic" title="Personal note">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="inline-block w-3 h-3 mr-1 text-stone-400 dark:text-stone-500 relative -top-px">
+              <path d="M13.488 2.513a1.75 1.75 0 0 0-2.475 0L6.75 6.774a2.75 2.75 0 0 0-.596.892l-.848 2.047a.75.75 0 0 0 .98.98l2.047-.848a2.75 2.75 0 0 0 .892-.596l4.261-4.262a1.75 1.75 0 0 0 0-2.474Z" />
+              <path d="M4.75 3.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h6.5c.69 0 1.25-.56 1.25-1.25V9A.75.75 0 0 1 14 9v2.25A2.75 2.75 0 0 1 11.25 14h-6.5A2.75 2.75 0 0 1 2 11.25v-6.5A2.75 2.75 0 0 1 4.75 2H7a.75.75 0 0 1 0 1.5H4.75Z" />
+            </svg>
+          </span>
+        ) : (
+          <span class="not-italic" title="AI-generated note">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="inline-block w-3 h-3 mr-1 text-amber-400 dark:text-amber-500 relative -top-px">
+              <path fill-rule="evenodd" d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L8 11.864l-3.136 1.83a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z" clip-rule="evenodd" />
+            </svg>
+          </span>
+        )}{note}
+      </p>
     )}
     <div class="flex flex-wrap gap-1">
       {tags.map(tag => <TagPill tag={tag} href={`/ril/tags/${tag}`} />)}

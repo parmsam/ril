@@ -28,6 +28,7 @@ tags: [string]
 date: YYYY-MM-DD           # publication date (shown in card)
 added: YYYY-MM-DD          # date visited/saved (used for chronological sort)
 note: string               # optional personal take
+ai_note: boolean           # optional — true (default) = AI-assisted note; false = written in own words
 resource: slug             # optional — parent resource slug
 ```
 
@@ -53,6 +54,7 @@ tags: [string]
 status: active | archived  # default: active
 added: YYYY-MM-DD
 note: string               # optional
+ai_note: boolean           # optional — true (default) = AI-assisted; false = own words
 ```
 
 ## Conventions

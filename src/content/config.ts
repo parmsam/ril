@@ -11,6 +11,7 @@ const resources = defineCollection({
     status: z.enum(['active', 'archived']).default('active'),
     added: z.coerce.date(),
     note: z.string().optional(),
+    ai_note: z.boolean().optional(),
   }),
 });
 
@@ -25,6 +26,7 @@ const links = defineCollection({
     date: z.coerce.date(),
     added: z.coerce.date(),
     note: z.string().optional(),
+    ai_note: z.boolean().optional(),
     resource: z.string().optional(),
   }),
 });
