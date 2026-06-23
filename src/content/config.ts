@@ -39,6 +39,7 @@ const til = defineCollection({
     tags: z.array(z.string()),
     source_url: z.string().url().optional(),
     source_title: z.string().optional(),
+    ai_note: z.boolean().optional(),
   }),
 });
 

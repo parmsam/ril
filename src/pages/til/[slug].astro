@@ -2,6 +2,8 @@
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import TagPill from '../../components/TagPill.astro';
+import AiIcon from '../../components/AiIcon.astro';
+import PersonalIcon from '../../components/PersonalIcon.astro';
 
 export async function getStaticPaths() {
   const entries = await getCollection('til');
@@ -13,7 +15,7 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
-const { title, date, tags, source_url, source_title } = entry.data;
+const { title, date, tags, source_url, source_title, ai_note } = entry.data;
 const dateStr = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
 ---
 
@@ -33,6 +35,10 @@ const dateStr = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long
     </header>
 
     <div class="prose prose-stone dark:prose-invert prose-sm max-w-none mb-8 prose-a:text-amber-600 dark:prose-a:text-amber-400 prose-a:no-underline hover:prose-a:underline">
+      <p class="not-prose flex items-center gap-1 text-xs text-stone-400 dark:text-stone-500 mb-4">
+        {ai_note === false ? <PersonalIcon /> : <AiIcon />}
+        {ai_note === false ? 'Written in my own words.' : 'AI-assisted writing.'}
+      </p>
       <Content />
     </div>
 
