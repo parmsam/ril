@@ -37,7 +37,7 @@ const dateStr = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long
     <div class="prose prose-stone dark:prose-invert prose-sm max-w-none mb-8 prose-a:text-amber-600 dark:prose-a:text-amber-400 prose-a:no-underline hover:prose-a:underline">
       <p class="not-prose flex items-center gap-1 text-xs text-stone-400 dark:text-stone-500 mb-4">
         {ai_note === false ? <PersonalIcon /> : <AiIcon />}
-        {ai_note === false ? 'Written in my own words.' : 'AI-assisted writing.'}
+        {ai_note === false ? 'Written in my own words.' : 'AI-generated writing.'}
       </p>
       <Content />
     </div>
