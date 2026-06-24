@@ -40,6 +40,7 @@ date: YYYY-MM-DD
 tags: [string]
 source_url: URL            # optional
 source_title: string       # optional
+ai_note: boolean           # optional — true (default) = AI-assisted; false = written in own words
 ---
 ```
 Body: 1–5 sentences of markdown. No preamble ("In this post…"). Write the insight directly.
@@ -56,6 +57,10 @@ added: YYYY-MM-DD
 note: string               # optional
 ai_note: boolean           # optional — true (default) = AI-assisted; false = own words
 ```
+
+## YAML gotchas
+
+- **Titles with double quotes**: If a title contains `"quoted"` text, wrap the entire value in single quotes — `title: '"AI-native" mandates...'` — otherwise js-yaml treats the first `"` as a string delimiter and fails with "bad indentation of a mapping entry".
 
 ## Conventions
 
