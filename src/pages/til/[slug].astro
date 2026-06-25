@@ -110,6 +110,7 @@ const dateStr = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long
     return (
       en.find(v => v.name.includes('Google')) ??
       en.find(v => v.name.includes('Enhanced')) ??
+      en.find(v => v.name.includes('Siri')) ??
       en.find(v => v.lang === 'en-US') ??
       null
     );
