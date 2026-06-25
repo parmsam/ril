@@ -87,12 +87,24 @@ const dateStr = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long
     if (label) label.textContent = 'Stop';
   }
 
+  function pickVoice() {
+    const voices = window.speechSynthesis.getVoices();
+    const en = voices.filter(v => v.lang.startsWith('en'));
+    return (
+      en.find(v => v.name.includes('Google')) ??
+      en.find(v => v.name.includes('Enhanced')) ??
+      en.find(v => v.lang === 'en-US') ??
+      null
+    );
+  }
+
   btn?.addEventListener('click', () => {
     if (window.speechSynthesis.speaking) {
       window.speechSynthesis.cancel();
       setIdle();
     } else {
       const utterance = new SpeechSynthesisUtterance(text);
+      utterance.voice = pickVoice();
       utterance.onend = setIdle;
       utterance.onerror = setIdle;
       window.speechSynthesis.speak(utterance);
