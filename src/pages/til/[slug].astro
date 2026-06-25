@@ -34,7 +34,24 @@ const dateStr = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long
       )}
     </header>
 
-    <div class="prose prose-stone dark:prose-invert prose-sm max-w-none mb-8 prose-a:text-amber-600 dark:prose-a:text-amber-400 prose-a:no-underline hover:prose-a:underline">
+    <button
+      id="read-aloud-btn"
+      title="Read aloud"
+      class="flex items-center gap-1.5 text-xs text-stone-400 dark:text-stone-500 hover:text-amber-600 dark:hover:text-amber-400 transition-colors mb-6"
+    >
+      <svg id="speak-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+        <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+      </svg>
+      <svg id="stop-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 hidden">
+        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+        <line x1="23" y1="9" x2="17" y2="15"></line>
+        <line x1="17" y1="9" x2="23" y2="15"></line>
+      </svg>
+      <span id="read-aloud-label">Read aloud</span>
+    </button>
+
+    <div id="til-body" class="prose prose-stone dark:prose-invert prose-sm max-w-none mb-8 prose-a:text-amber-600 dark:prose-a:text-amber-400 prose-a:no-underline hover:prose-a:underline">
       <p class="not-prose flex items-center gap-1 text-xs text-stone-400 dark:text-stone-500 mb-4">
         {ai_note === false ? <PersonalIcon /> : <AiIcon />}
         {ai_note === false ? 'Written in my own words.' : 'AI-generated writing.'}
@@ -47,3 +64,39 @@ const dateStr = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long
     </footer>
   </article>
 </Base>
+
+<script is:inline>
+  const btn = document.getElementById('read-aloud-btn');
+  const speakIcon = document.getElementById('speak-icon');
+  const stopIcon = document.getElementById('stop-icon');
+  const label = document.getElementById('read-aloud-label');
+  const body = document.getElementById('til-body');
+  const titleEl = document.querySelector('h1');
+
+  const text = (titleEl?.innerText ?? '') + '. ' + (body?.innerText ?? '');
+
+  function setIdle() {
+    speakIcon?.classList.remove('hidden');
+    stopIcon?.classList.add('hidden');
+    if (label) label.textContent = 'Read aloud';
+  }
+
+  function setSpeaking() {
+    speakIcon?.classList.add('hidden');
+    stopIcon?.classList.remove('hidden');
+    if (label) label.textContent = 'Stop';
+  }
+
+  btn?.addEventListener('click', () => {
+    if (window.speechSynthesis.speaking) {
+      window.speechSynthesis.cancel();
+      setIdle();
+    } else {
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.onend = setIdle;
+      utterance.onerror = setIdle;
+      window.speechSynthesis.speak(utterance);
+      setSpeaking();
+    }
+  });
+</script>
