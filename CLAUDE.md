@@ -61,10 +61,16 @@ ai_note: boolean           # optional — true (default) = AI-assisted; false = 
 ## YAML gotchas
 
 - **Titles with double quotes**: If a title contains `"quoted"` text, wrap the entire value in single quotes — `title: '"AI-native" mandates...'` — otherwise js-yaml treats the first `"` as a string delimiter and fails with "bad indentation of a mapping entry".
+- **Notes/descriptions with colons**: If a `note` or `description` value contains a colon (e.g. `"The part that stuck: …"`), wrap the entire value in double quotes — `note: "…stuck: …"` — otherwise js-yaml parses the colon as a mapping separator.
 
 ## Conventions
 
 - **Link vs TIL**: A Link points to an external piece of content. A TIL is a short learned fact written in first person from reading that content.
 - **Link vs Resource**: A Resource is the home of something ongoing (a blog, podcast, newsletter). A Link is a single piece from it.
 - **Slugs**: lowercase, hyphens only, max ~5 words.
-- **Fetching content**: Use `defuddle.md` to get clean markdown from a URL — prepend `https://defuddle.md/` to the URL with `https://` stripped (e.g. `curl -s https://defuddle.md/example.com/post`). Read the result before writing descriptions or notes.
+- **Fetching content**: Use this fallback chain to get clean markdown from a URL:
+  1. defuddle: `curl -s https://defuddle.md/example.com/post` (strip `https://` from the target URL)
+  2. Jina Reader: `curl -s https://r.jina.ai/https://example.com/post`
+  3. WebFetch tool
+
+- **Local page archive**: After fetching, always save the raw markdown to `ref-sources/YYYY-MM-DD-slug.md` (matching the content file slug). This directory is gitignored — it's a local-only archive in case the original URL goes down. When writing descriptions or notes, pull from the saved local copy rather than re-fetching.
