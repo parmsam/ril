@@ -65,6 +65,7 @@ ai_note: boolean           # optional — true (default) = AI-assisted; false = 
 
 ## Conventions
 
+- **`ai_note` default**: Omit `ai_note` or set it to `true` unless the user explicitly says they wrote the note/description themselves. Never set `ai_note: false` just because the content reflects a conversation — if Claude wrote or paraphrased it, it's AI-assisted.
 - **Link vs TIL**: A Link points to an external piece of content. A TIL is a short learned fact written in first person from reading that content.
 - **Link vs Resource**: A Resource is the home of something ongoing (a blog, podcast, newsletter). A Link is a single piece from it.
 - **Slugs**: lowercase, hyphens only, max ~5 words.
