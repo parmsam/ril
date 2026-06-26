@@ -76,3 +76,4 @@ ai_note: boolean           # optional — true (default) = AI-assisted; false = 
   3. WebFetch tool
 
 - **Local page archive**: After fetching, always save the raw markdown to `ref-sources/YYYY-MM-DD-slug.md` (matching the content file slug). This directory is gitignored — it's a local-only archive in case the original URL goes down. When writing descriptions or notes, pull from the saved local copy rather than re-fetching.
+- **Commit and push on completion**: After finishing a TIL, link, or resource, commit and push without waiting to be asked.
