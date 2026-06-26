@@ -43,7 +43,7 @@ source_title: string       # optional
 ai_note: boolean           # optional — true (default) = AI-assisted; false = written in own words
 ---
 ```
-Body: 1–5 sentences of markdown. No preamble ("In this post…"). Write the insight directly.
+Body: markdown, max 3 paragraphs. No preamble ("In this post…"). Write the insight directly.
 
 **Resources** (`src/content/resources/slug.yaml`)
 ```yaml
