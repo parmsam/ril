@@ -26,6 +26,21 @@ const allTags = [...new Set([
   ...links.flatMap(l => l.data.tags),
   ...tils.flatMap(t => t.data.tags),
 ])].sort();
+
+const VISIBLE_TAG_LIMIT = 20;
+const recentTags: string[] = [];
+for (const item of feed) {
+  const tags =
+    item.kind === 'resource' ? item.entry.data.tags :
+    item.kind === 'link'     ? item.entry.data.tags :
+                               item.entry.data.tags;
+  for (const tag of tags) {
+    if (!recentTags.includes(tag)) recentTags.push(tag);
+    if (recentTags.length >= VISIBLE_TAG_LIMIT) break;
+  }
+  if (recentTags.length >= VISIBLE_TAG_LIMIT) break;
+}
+const hiddenTags = allTags.filter(t => !recentTags.includes(t));
 ---
 
 <Base>
@@ -37,7 +52,7 @@ const allTags = [...new Set([
   <Search />
 
   <div class="flex flex-wrap gap-1.5 mb-10">
-    {allTags.map(tag => (
+    {recentTags.map(tag => (
       <a
         href={`/ril/tags/${tag}`}
         class="px-2.5 py-1 rounded-full text-xs bg-stone-100 dark:bg-stone-800 text-stone-500 dark:text-stone-400 hover:bg-amber-100 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-400 transition-colors"
@@ -45,6 +60,21 @@ const allTags = [...new Set([
         #{tag}
       </a>
     ))}
+    {hiddenTags.length > 0 && (
+      <details class="contents">
+        <summary class="px-2.5 py-1 rounded-full text-xs bg-stone-100 dark:bg-stone-800 text-stone-400 dark:text-stone-500 hover:bg-stone-200 dark:hover:bg-stone-700 cursor-pointer transition-colors list-none">
+          +{hiddenTags.length} more
+        </summary>
+        {hiddenTags.map(tag => (
+          <a
+            href={`/ril/tags/${tag}`}
+            class="px-2.5 py-1 rounded-full text-xs bg-stone-100 dark:bg-stone-800 text-stone-500 dark:text-stone-400 hover:bg-amber-100 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-400 transition-colors"
+          >
+            #{tag}
+          </a>
+        ))}
+      </details>
+    )}
   </div>
 
   <div>
