@@ -62,6 +62,7 @@ ai_note: boolean           # optional — true (default) = AI-assisted; false = 
 
 - **Titles with double quotes**: If a title contains `"quoted"` text, wrap the entire value in single quotes — `title: '"AI-native" mandates...'` — otherwise js-yaml treats the first `"` as a string delimiter and fails with "bad indentation of a mapping entry".
 - **Notes/descriptions with colons**: If a `note` or `description` value contains a colon (e.g. `"The part that stuck: …"`), wrap the entire value in double quotes — `note: "…stuck: …"` — otherwise js-yaml parses the colon as a mapping separator.
+- **Values with both single and double quotes**: Use a YAML block scalar to avoid all quoting conflicts — `note: >-\n  text with "quotes" and it's fine: colons too`. The `>-` style folds newlines into spaces and strips the trailing newline.
 
 ## Conventions
 
