@@ -102,6 +102,29 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
     <script is:inline>
       (function () {
+        document.querySelectorAll('[data-copy-href]').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var href = btn.dataset.copyHref;
+            var url = href.startsWith('/')
+              ? window.location.origin + href
+              : window.location.href.split('#')[0] + href;
+            navigator.clipboard.writeText(url).then(function () {
+              var linkIcon = btn.querySelector('.copy-link-icon');
+              var checkIcon = btn.querySelector('.copy-check-icon');
+              linkIcon.classList.add('hidden');
+              checkIcon.classList.remove('hidden');
+              setTimeout(function () {
+                linkIcon.classList.remove('hidden');
+                checkIcon.classList.add('hidden');
+              }, 1500);
+            });
+          });
+        });
+      })();
+    </script>
+
+    <script is:inline>
+      (function () {
         var toggle = document.getElementById('theme-toggle');
         var sun = document.getElementById('icon-sun');
         var moon = document.getElementById('icon-moon');

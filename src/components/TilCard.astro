@@ -20,9 +20,24 @@ const dateStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric
       <span class="inline-block px-1.5 py-0.5 rounded text-xs font-medium bg-amber-50 dark:bg-amber-950 text-amber-600 dark:text-amber-400">TIL</span>
       {ai_note === false ? <PersonalIcon /> : <AiIcon title="AI-generated TIL" />}
     </div>
-    <a href={`/ril/til/${entry.slug}`}>
-      <h2 class="font-medium text-stone-900 dark:text-stone-100 hover:text-amber-700 dark:hover:text-amber-400 transition-colors mb-1 leading-snug">{title}</h2>
-    </a>
+    <div class="flex items-start gap-1.5 mb-1">
+      <a href={`/ril/til/${entry.slug}`} class="flex-1 min-w-0">
+        <h2 class="font-medium text-stone-900 dark:text-stone-100 hover:text-amber-700 dark:hover:text-amber-400 transition-colors leading-snug">{title}</h2>
+      </a>
+      <button
+        data-copy-href={`/ril/til/${entry.slug}`}
+        aria-label="Copy link to this TIL"
+        class="flex-shrink-0 mt-0.5 opacity-0 group-hover:opacity-100 focus:opacity-100 p-0.5 rounded text-stone-400 hover:text-stone-600 dark:text-stone-500 dark:hover:text-stone-300 transition-opacity"
+      >
+        <svg class="copy-link-icon w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+          <path d="M12.232 4.232a2.5 2.5 0 013.536 3.536l-1.225 1.224a.75.75 0 001.061 1.06l1.224-1.224a4 4 0 00-5.656-5.656l-3 3a4 4 0 00.225 5.865.75.75 0 00.977-1.138 2.5 2.5 0 01-.142-3.667l3-3z"/>
+          <path d="M11.603 7.963a.75.75 0 00-.977 1.138 2.5 2.5 0 01.142 3.667l-3 3a2.5 2.5 0 01-3.536-3.536l1.225-1.224a.75.75 0 00-1.061-1.06l-1.224 1.224a4 4 0 005.656 5.656l3-3a4 4 0 00-.225-5.865z"/>
+        </svg>
+        <svg class="copy-check-icon hidden w-3.5 h-3.5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/>
+        </svg>
+      </button>
+    </div>
     {source_url && (
       <p class="text-xs text-stone-400 dark:text-stone-500 mb-2">
         via <a href={source_url} class="hover:text-stone-600 dark:hover:text-stone-300 underline underline-offset-2 transition-colors" target="_blank" rel="noopener noreferrer">{source_title ?? source_url}</a>
