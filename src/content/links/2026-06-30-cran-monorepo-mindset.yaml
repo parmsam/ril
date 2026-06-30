@@ -1,0 +1,8 @@
+title: If all the world were a monorepo
+url: https://open.substack.com/pub/jtibs/p/if-all-the-world-were-a-monorepo
+description: A Substack essay by a Stanford ML researcher who built R packages for CRAN, exploring how CRAN's reverse dependency checks — which block a package update if it breaks any downstream package — embody a "monorepo mindset" that makes breaking-change authors responsible for their entire dependency graph.
+type: post
+tags: [r, python, package-management, dependencies, open-source, software-engineering]
+date: 2025-09-08
+added: 2026-06-30
+note: "Contrasts CRAN's culture of author-owned migrations with PyPI/npm's publish-at-will model. The author argues CRAN's approach, while slower for individual releases, produces better outcomes for the ecosystem — a point reinforced by their experience at Databricks, where centralizing breaking changes (rather than federating them to consumers) led to faster, more complete migrations with fewer regressions. Particularly pointed for Python ecosystems where library churn and silent breakage are routine."
