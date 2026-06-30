@@ -66,6 +66,7 @@ ai_note: boolean           # optional — true (default) = AI-assisted; false = 
 
 ## Conventions
 
+- **Fact-check author details**: Only include author name, affiliation, or credentials if they appear explicitly in the fetched source. Do not infer affiliation from usernames, handles, or pattern-matching against known people (e.g. `jtibs` → "Stanford researcher"). If authorship is unclear, omit it from the description entirely.
 - **`ai_note` default**: Omit `ai_note` or set it to `true` unless the user explicitly says they wrote the note/description themselves. Never set `ai_note: false` just because the content reflects a conversation — if Claude wrote or paraphrased it, it's AI-assisted.
 - **Voice for AI-generated notes**: Write in third-person or neutral descriptive style — never first-person ("the part that stuck", "what I found interesting"). First-person voice is reserved for `ai_note: false` entries the user wrote themselves.
 - **Link vs TIL**: A Link points to an external piece of content. A TIL is a short learned fact written in first person from reading that content.
