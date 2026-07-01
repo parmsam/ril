@@ -1,0 +1,8 @@
+title: "How to Buy Cheap Claude Tokens in China"
+url: https://www.chinatalk.media/p/how-to-buy-cheap-claude-tokens-in
+description: An investigation by Zilan Qian (Oxford China Policy Lab) into China's "transfer station" (中转站) grey market of API proxies that let developers access Claude at roughly 10% of the official price — and how each new access control layer (geoblocking, phone verification, biometric KYC) generates a corresponding evasion infrastructure, from SMS farms to biometric harvesting operations abroad.
+type: article
+tags: [ai, china, anthropic, policy, ai-governance, security]
+date: 2026-05-05
+added: 2026-07-01
+note: "The most striking insight is the 'one fish, three meals' (一鱼三吃) pricing model: cheap tokens are largely customer acquisition, with the real margin coming from selling users' full prompt/response logs as training data — making users simultaneously paying customers and unpaid data producers."
