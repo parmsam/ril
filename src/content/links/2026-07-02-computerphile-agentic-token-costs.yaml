@@ -1,0 +1,17 @@
+title: Extreme Token Use of Agentic AI
+url: https://www.youtube.com/watch?v=-0HRzXk8vlk
+description: >-
+  Computerphile's Mike walks through why agentic coding sessions burn so many tokens:
+  the entire context window re-enters the model on every forward pass, and each file
+  read by a coding agent adds thousands of tokens that compound across every subsequent
+  step. A two-file bug-fix demo accumulates ~55–60k tokens; a six-prompt starfield
+  screensaver hit 2 million input tokens.
+type: video
+tags: [ai, llms, tokens, agentic-ai, coding-assistants, cost]
+date: 2026-07-02
+added: 2026-07-02
+note: >-
+  The GitHub Copilot flat-fee-to-per-token switch is the clearest case study here —
+  the old model was just a subsidy. The tire-wear analogy for measuring productivity
+  in tokens is apt. Most agentic use cases are still hard to justify on pure cost grounds
+  outside of very targeted, short-context tasks.
