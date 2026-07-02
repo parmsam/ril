@@ -15,7 +15,7 @@ const addedStr = added.toLocaleDateString('en-US', { month: 'short', day: 'numer
 const pubStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 ---
 
-<article id={link.id} class="group flex gap-4 py-4 border-b border-stone-100 dark:border-stone-800 last:border-0">
+<article id={link.id} class="group flex gap-4 py-4 border-b border-stone-100 dark:border-stone-800 last:border-0 scroll-mt-16">
   <time class="flex-shrink-0 text-xs text-stone-400 dark:text-stone-500 pt-0.5 w-24 text-right tabular-nums">{addedStr}</time>
   <div class="flex-1 min-w-0">
     <div class="flex items-center gap-2 mb-1">

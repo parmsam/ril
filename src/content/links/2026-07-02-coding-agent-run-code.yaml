@@ -1,0 +1,18 @@
+title: "Help! My coding agent can run code"
+url: https://tidydesign.substack.com/p/help-my-coding-agent-can-run-code
+description: >-
+  Hadley Wickham surveys why tightly-scoped tools don't scale for coding agents,
+  and walks through three layers of protection — explicit permission prompts,
+  OS-level sandboxing, and a secondary LLM safety review — explaining the
+  tradeoffs and failure modes of each.
+type: article
+tags: [ai, coding-agents, security, safety, agentic-ai]
+date: 2026-07-02
+added: 2026-07-02
+note: >-
+  The current state of the art described here — sandbox by default, then LLM
+  review for anything the sandbox rejects — is what Posit Assistant just
+  implemented. The permission-prompt approach is dismissed as security theatre:
+  approval fatigue means users click yes without scrutiny. The narrowly-scoped
+  safe tool approach fails for a different reason: agents perform better with
+  fewer, more general tools than a large menu of limited ones.

@@ -12,7 +12,7 @@ const { resource } = Astro.props;
 const { title, url, description, type, tags, status, note, ai_note } = resource.data;
 ---
 
-<article id={resource.id} class="group p-4 rounded-lg border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 hover:border-amber-300 dark:hover:border-amber-700 hover:shadow-sm transition-all">
+<article id={resource.id} class="group p-4 rounded-lg border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 hover:border-amber-300 dark:hover:border-amber-700 hover:shadow-sm transition-all scroll-mt-16">
   <div class="flex items-center justify-between gap-2 mb-2">
     <div class="flex items-center gap-2">
       <TypeBadge type={type} />
