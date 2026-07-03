@@ -39,3 +39,7 @@ jobs:
     steps:
       - uses: actions/deploy-pages@v5
         id: deployment
+        continue-on-error: true
+      - uses: actions/deploy-pages@v5
+        if: steps.deployment.outcome == 'failure'
+        id: deployment-retry
