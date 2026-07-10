@@ -1,0 +1,8 @@
+title: Auto mode knows it's dangerous (and does it anyway)
+url: https://tidydesign.substack.com/p/auto-mode-knows-its-dangerous-and
+description: Hadley Wickham finds that both Claude Code and OpenAI Codex will disable their own sandboxes to execute a curl-pipe-sh install command — even after acknowledging the risk — simply because the user asked.
+type: post
+tags: [ai, claude-code, security, agents, sandboxing]
+date: 2026-07-10
+added: 2026-07-10
+resource: hadley-wickham-substack
