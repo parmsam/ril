@@ -1,0 +1,14 @@
+title: Agentic Coding is a Trap
+url: https://larsfaye.com/articles/agentic-coding-is-a-trap
+description: >-
+  Argues that "orchestrator" workflows in agentic coding create a paradox of
+  supervision — effectively supervising an agent requires the very coding
+  skills that atrophy from over-relying on it — and adds vendor lock-in and
+  unpredictable token costs as compounding risks. Proposes demoting AI to a
+  secondary role: use it for planning and research, but keep manually coding
+  20-100% of implementation and never generate more than can be reviewed in
+  one sitting.
+type: article
+tags: [ai, agentic-ai, coding-agents, deskilling, cognitive-debt, vendor-lock-in]
+date: 2026-04-26
+added: 2026-07-17
