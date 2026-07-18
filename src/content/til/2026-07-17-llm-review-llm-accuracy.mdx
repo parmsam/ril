@@ -1,0 +1,14 @@
+---
+title: "Using an LLM to check another LLM's work doesn't multiply accuracy"
+date: 2026-07-17
+tags:
+  - ai
+  - security
+  - agents
+source_url: https://www.youtube.com/watch?v=yvJYw2gR0cU
+source_title: "Claude is your insider threat now - Dan Tentler - Security Fest 2026"
+---
+
+Dan Tentler's talk on the 2026 wave of LLM-tooling supply chain attacks made a specific quantitative point worth remembering: if a model produces correct output roughly 60% of the time, having a second model check the first model's work doesn't compound toward something like 100–120% accuracy the way two independent human reviewers might catch each other's mistakes. The actual gain is much smaller, because both models share the same blind spots and hallucination patterns. The main measurable effect is a lot more tokens burned and more false positives to sift through, not a meaningfully more trustworthy result.
+
+That reframes where a "security chokepoint" is actually worth the effort. It's tempting to bolt a second agent onto a pipeline as a review step and call it defense in depth, but if it's LLM reviewing LLM, it's largely theater. Every incident cited in the talk — the company deleted in 9 seconds, the GitHub compromise via a malicious VS Code extension, containers phoning home — traced back to no human being in the loop at the point output turned into action. The fix isn't a smarter automated gate; it's making sure a person, not another model, sits at whatever chokepoint exists before code, commits, or credentials go anywhere sensitive.
