@@ -12,3 +12,9 @@ type: article
 tags: [ai, agentic-ai, coding-agents, deskilling, cognitive-debt, vendor-lock-in]
 date: 2026-04-26
 added: 2026-07-17
+note: >-
+  I love the line that a higher level of ambiguity is not a higher level of
+  abstraction, and the Jeremy Howard quote at the end. It ties back to the
+  "dark flow" article I have saved — Rachel Thomas's gambling-addiction
+  parallel to vibe coding, the same slot-machine-lever feeling.
+ai_note: false
