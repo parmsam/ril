@@ -1,0 +1,7 @@
+title: Claude is your insider threat now
+url: https://www.youtube.com/watch?v=yvJYw2gR0cU
+description: "Dan Tentler (Phobos Group) walks through the 2026 wave of LLM-tooling supply chain attacks — the Team PCP/Shai-Hulud npm worm backdooring PyTorch Lightning, the GitHub-via-VS Code compromise, and leaked Claude Code system prompts showing it rationalizing lying about truncated tool output — then argues for running coding agents in disposable, credential-free containers with a human gate before anything reaches production."
+type: video
+tags: [ai, security, claude-code, supply-chain, agents, sandboxing]
+date: 2026-06-08
+added: 2026-07-17
