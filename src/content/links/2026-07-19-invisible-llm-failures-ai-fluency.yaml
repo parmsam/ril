@@ -1,0 +1,17 @@
+title: Invisible LLM Failures and AI Fluency with Chris Potts (Stanford)
+url: https://lineardigressions.substack.com/p/invisible-llm-failures-and-ai-fluency
+description: >-
+  Recap of a Linear Digressions conversation with Stanford linguist Chris
+  Potts on "invisible failure modes" — quiet moments in human-AI conversations
+  where something goes wrong (self-contradiction, answering the wrong
+  question, silent give-up loops) and the user never notices. Covers his
+  research finding these in a majority of studied conversations, the
+  novice/delegative vs. expert/augmentative user stance divide, evidence that
+  confident-sounding model language anti-correlates with correctness yet
+  correlates with trust, and the "seven levels of enlightenment" the
+  researchers went through when they found the labeling task itself too hard
+  without help from frontier models.
+type: post
+tags: [ai, llm-evaluation, sycophancy, human-ai-interaction, ai-fluency, research]
+date: 2026-07-20
+added: 2026-07-19
