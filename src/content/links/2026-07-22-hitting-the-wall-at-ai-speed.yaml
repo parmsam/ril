@@ -1,0 +1,14 @@
+title: "The hidden cost of AI-assisted development: cognitive fatigue"
+url: https://warpedvisions.org/blog/2025/hitting-the-wall-at-ai-speed/
+description: >-
+  Three months into AI-assisted development, the author finds the fatigue has
+  shifted from wrestling with implementation details to constant
+  architecture-level decision-making, since the AI is ready to implement
+  whatever is chosen the moment it's chosen. Also flags a code-review blind
+  spot: you can't interrogate an AI's reasoning after the fact the way you can
+  ask a human collaborator why they made a choice.
+type: article
+tags: [ai, coding-agents, cognitive-load, programmer-health, code-review]
+date: 2025-08-10
+added: 2026-07-22
+note: Referenced in George Hotz's "I love LLMs, I hate hype" as a caution about AI-assisted coding increasing cognitive fatigue.
