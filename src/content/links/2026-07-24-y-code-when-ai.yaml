@@ -1,0 +1,13 @@
+title: "y code when ai?"
+url: https://tidydesign.substack.com/p/y-code-when-ai
+description: >-
+  Hadley Wickham writes up a talk on his ambivalence about AI-assisted coding —
+  the "software factory" dystopia of Steve Yegge's Gas Town versus using AI to
+  write higher-quality code — and argues chat interfaces leave ~90% of an
+  LLM's value on the table for programming, compared to giving it a harness to
+  write, run, and iterate on code with a feedback loop of errors and docs.
+type: post
+tags: [ai, coding-agents, r, data-science, software-design]
+date: 2026-07-24
+added: 2026-07-24
+resource: hadley-wickham-substack
