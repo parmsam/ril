@@ -1,0 +1,17 @@
+---
+title: "LLMs read plots by trusting axis labels, not by actually looking"
+date: 2026-07-24
+tags:
+  - ai
+  - llms
+  - data-science
+  - benchmarks
+source_url: https://tidydesign.substack.com/p/y-code-when-ai
+source_title: "y code when ai?"
+---
+
+Posit's bluffbench takes a standard fuel-economy plot (engine size on x, miles per gallon on y) and secretly flips one axis so the real relationship in the data is reversed. Shown the resulting chart — which visually shows fuel economy rising as engine size increases, the opposite of what anyone would expect — about 80% of frontier models still describe it as "fuel economy decreases as engine size increases." They report the expected relationship instead of the one actually drawn.
+
+The failure is specifically laziness, not blindness: the models can read plots when pushed to, but default to pattern-matching the expected story from the axis labels rather than checking what the marks actually show. It's the same shortcut humans take when skimming a familiar-looking chart.
+
+Worth remembering as a concrete reason not to trust an agent's plot description at face value, especially for anything where the finding is supposed to be surprising — that's exactly the case where an LLM's prior is most likely to overrule its eyes.
