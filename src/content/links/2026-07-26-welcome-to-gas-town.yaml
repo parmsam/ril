@@ -1,0 +1,14 @@
+title: "Welcome to Gas Town"
+url: https://steve-yegge.medium.com/welcome-to-gas-town-4f25ee16dd04
+description: >-
+  Steve Yegge introduces Gas Town, an opinionated orchestrator for running
+  20-30 Claude Code instances at once, built on his Beads issue tracker.
+  Coding agents are organized into seven roles (Mayor, Polecats, Refinery,
+  Witness, Deacon, Dogs, Crew) that pick up persistent "molecule" workflows
+  from a Git-backed queue, self-restart across crashes and context limits, and
+  merge work through a dedicated queue — explicitly compared to Kubernetes and
+  Temporal, but optimizing for task completion rather than uptime.
+type: post
+tags: [ai, coding-agents, agentic-ai, orchestration, claude-code]
+date: 2026-01-01
+added: 2026-07-26
