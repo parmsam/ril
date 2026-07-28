@@ -1,0 +1,17 @@
+---
+title: "A gray market resells stolen API access specifically to distill frontier models"
+date: 2026-07-28
+tags:
+  - ai
+  - security
+  - distillation
+  - llms
+source_url: https://vectoral.com/blog/token-relay-market
+source_title: "An Inside Look at the Relay Market Powering Token Resellers and Fraud"
+---
+
+There's a whole supply chain built around reselling stolen or bulk-fraudulent access to frontier model APIs in mainland China. Card and account merchants sell virtual credit cards and bulk-registered accounts, "account pools" aggregate hundreds of those accounts behind a single API, and consumer-facing "relays" wrap that pool in a billed, Chinese-language product — undercutting official pricing by as much as 97.8%. One sampled package bought $3,333 of official Anthropic credit for 425 RMB, about $0.13 of real usage per $1 spent.
+
+One of the named buyer segments for this cheap access is model distillation: companies collecting large volumes of outputs from Claude and other frontier models specifically to train their own domestic models. A forum source described it as a multi-billion RMB industry with some operators earning hundreds of thousands of RMB a day. It's a concrete, industrial-scale version of the distillation-as-theft scenario — rather than one lab quietly querying another's API, there's now dedicated infrastructure whose purpose is laundering identity and payment fraud into cheap bulk access for exactly that purpose.
+
+The market is mature enough to have price-comparison sites, affiliate programs, and even a daily lottery giving away $100 API keys — with a "provably fair" cryptographic draw borrowed straight from crypto-gambling sites. That kind of normalization, more than the technical mechanics, is the part worth remembering: this isn't a handful of opportunists, it's an established ecosystem with its own tooling (mostly built on two open-source gateway projects, one-api and new-api) and its own reputational infrastructure for trust between fraudulent actors.
