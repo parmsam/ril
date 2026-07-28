@@ -1,0 +1,9 @@
+title: "Distillation, or, How to Steal a Model"
+url: https://lineardigressions.substack.com/p/distillation-or-how-to-steal-a-model
+description: "Explains model distillation as both a legitimate technique for building smaller, cheaper models and a contested way to clone a rival lab's model via its API, plus why proving distillation happened is forensically hard. Covers the 2015 Hinton/Vinyals/Dean paper's soft-target vs. hard-label distinction."
+type: episode
+tags: [ai, ml, distillation, llms]
+date: 2026-07-27
+added: 2026-07-28
+resource: linear-digressions
+ai_note: true
