@@ -1,0 +1,8 @@
+title: "An Inside Look at the Relay Market Powering Token Resellers and Fraud"
+url: https://vectoral.com/blog/token-relay-market
+description: "Investigates the Chinese gray-market 'relay' ecosystem that resells cheap, bulk-sourced access to OpenAI, Anthropic, and Google APIs, tracing the supply chain from stolen/bulk accounts through account pools to consumer-facing relays used for cheap inference and model distillation."
+type: article
+tags: [ai, security, fraud, llms]
+date: 2026-06-28
+added: 2026-07-28
+ai_note: true
