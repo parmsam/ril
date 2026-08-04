@@ -11,6 +11,7 @@ const { entry } = Astro.props;
 const { title, date, tags, source_url, source_title, ai_note } = entry.data;
 
 const dateStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+const base = import.meta.env.BASE_URL;
 ---
 
 <article class="group flex gap-4 py-4 border-b border-stone-100 dark:border-stone-800 last:border-0">
@@ -21,11 +22,11 @@ const dateStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric
       {ai_note === false ? <PersonalIcon /> : <AiIcon title="AI-generated TIL" />}
     </div>
     <div class="flex items-start gap-1.5 mb-1">
-      <a href={`/ril/til/${entry.slug}`} class="flex-1 min-w-0">
+      <a href={`${base}/til/${entry.slug}`} class="flex-1 min-w-0">
         <h2 class="font-medium text-stone-900 dark:text-stone-100 hover:text-amber-700 dark:hover:text-amber-400 transition-colors leading-snug">{title}</h2>
       </a>
       <button
-        data-copy-href={`/ril/til/${entry.slug}`}
+        data-copy-href={`${base}/til/${entry.slug}`}
         aria-label="Copy link to this TIL"
         class="flex-shrink-0 mt-0.5 opacity-0 group-hover:opacity-100 focus:opacity-100 p-0.5 rounded text-stone-400 hover:text-stone-600 dark:text-stone-500 dark:hover:text-stone-300 transition-opacity"
       >
@@ -44,7 +45,7 @@ const dateStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric
       </p>
     )}
     <div class="flex flex-wrap gap-1">
-      {tags.map(tag => <TagPill tag={tag} href={`/ril/tags/${tag}`} />)}
+      {tags.map(tag => <TagPill tag={tag} href={`${base}/tags/${tag}`} />)}
     </div>
   </div>
 </article>

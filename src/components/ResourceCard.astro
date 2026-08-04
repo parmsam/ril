@@ -10,6 +10,7 @@ interface Props {
 }
 const { resource } = Astro.props;
 const { title, url, description, type, tags, status, note, ai_note } = resource.data;
+const base = import.meta.env.BASE_URL;
 ---
 
 <article id={resource.id} class="group p-4 rounded-lg border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 hover:border-amber-300 dark:hover:border-amber-700 hover:shadow-sm transition-all scroll-mt-16">
@@ -46,6 +47,6 @@ const { title, url, description, type, tags, status, note, ai_note } = resource.
     </p>
   )}
   <div class="flex flex-wrap gap-1">
-    {tags.map(tag => <TagPill tag={tag} href={`/ril/tags/${tag}`} />)}
+    {tags.map(tag => <TagPill tag={tag} href={`${base}/tags/${tag}`} />)}
   </div>
 </article>

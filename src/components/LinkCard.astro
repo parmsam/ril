@@ -13,6 +13,7 @@ const { title, url, description, type, tags, date, added, note, ai_note } = link
 
 const addedStr = added.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 const pubStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+const base = import.meta.env.BASE_URL;
 ---
 
 <article id={link.id} class="group flex gap-4 py-4 border-b border-stone-100 dark:border-stone-800 last:border-0 scroll-mt-16">
@@ -49,7 +50,7 @@ const pubStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric'
       </p>
     )}
     <div class="flex flex-wrap gap-1">
-      {tags.map(tag => <TagPill tag={tag} href={`/ril/tags/${tag}`} />)}
+      {tags.map(tag => <TagPill tag={tag} href={`${base}/tags/${tag}`} />)}
     </div>
   </div>
 </article>

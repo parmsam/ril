@@ -117,7 +117,15 @@ npm run preview    # preview the built site
 
 Search requires a built index — run `npm run build` first, then `npm run preview`.
 
-Want to run your own instance? Fork the repo, replace the content in `src/content/` with your own, and push to `main` — the GitHub Actions workflow in [Deployment](#deployment) handles the rest.
+### Running your own instance
+
+Routing already adapts to whatever `base` you configure (via Astro's `import.meta.env.BASE_URL`), so forking only takes a few manual edits:
+
+1. Fork the repo.
+2. In `astro.config.mjs`, set `site` to your GitHub Pages URL and `base` to your repo name (see the comment above that block for user-site vs. project-site rules).
+3. Replace the content in `src/content/` with your own resources, links, and TILs.
+4. In `src/layouts/Base.astro`, swap the three `https://github.com/parmsam/ril` links for your own repo.
+5. Push to `main` — the GitHub Actions workflow in [Deployment](#deployment) handles the rest.
 
 ---
 

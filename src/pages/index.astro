@@ -41,6 +41,7 @@ for (const item of feed) {
   if (recentTags.length >= VISIBLE_TAG_LIMIT) break;
 }
 const hiddenTags = allTags.filter(t => !recentTags.includes(t));
+const base = import.meta.env.BASE_URL;
 ---
 
 <Base>
@@ -54,7 +55,7 @@ const hiddenTags = allTags.filter(t => !recentTags.includes(t));
   <div class="flex flex-wrap gap-1.5 mb-10">
     {recentTags.map(tag => (
       <a
-        href={`/ril/tags/${tag}`}
+        href={`${base}/tags/${tag}`}
         class="px-2.5 py-1 rounded-full text-xs bg-stone-100 dark:bg-stone-800 text-stone-500 dark:text-stone-400 hover:bg-amber-100 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-400 transition-colors"
       >
         #{tag}
@@ -67,7 +68,7 @@ const hiddenTags = allTags.filter(t => !recentTags.includes(t));
         </summary>
         {hiddenTags.map(tag => (
           <a
-            href={`/ril/tags/${tag}`}
+            href={`${base}/tags/${tag}`}
             class="px-2.5 py-1 rounded-full text-xs bg-stone-100 dark:bg-stone-800 text-stone-500 dark:text-stone-400 hover:bg-amber-100 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-400 transition-colors"
           >
             #{tag}

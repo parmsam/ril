@@ -13,6 +13,7 @@ const {
 } = Astro.props;
 
 const version = pkg.version;
+const base = import.meta.env.BASE_URL;
 
 const pageTitle = title === 'RIL' ? 'RIL' : `${title} · RIL`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -23,9 +24,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/ril/favicon.svg" />
-    <link rel="alternate" type="application/rss+xml" title="RIL Feed" href="/ril/feed.xml" />
-    <link href="/ril/pagefind/pagefind-ui.css" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
+    <link rel="alternate" type="application/rss+xml" title="RIL Feed" href={`${base}/feed.xml`} />
+    <link href={`${base}/pagefind/pagefind-ui.css`} rel="stylesheet" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
@@ -44,7 +45,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <body class="bg-stone-50 dark:bg-stone-950 text-stone-900 dark:text-stone-100 min-h-screen font-sans antialiased transition-colors">
     <header class="relative border-b border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 sticky top-0 z-10">
       <div class="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between">
-        <a href="/ril" class="font-semibold text-base tracking-tight hover:text-amber-600 dark:hover:text-amber-400 transition-colors">
+        <a href={base} class="font-semibold text-base tracking-tight hover:text-amber-600 dark:hover:text-amber-400 transition-colors">
           RIL <span class="text-stone-400 dark:text-stone-500 font-normal text-sm">resources i love</span>
         </a>
         <span class="hidden sm:block absolute left-1/2 -translate-x-1/2 text-xs font-mono text-stone-400 dark:text-stone-500">
@@ -52,9 +53,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         </span>
         <div class="flex items-center gap-5">
           <nav class="flex gap-5 text-sm text-stone-500 dark:text-stone-400">
-            <a href="/ril/resources" class="hover:text-stone-900 dark:hover:text-stone-100 transition-colors">resources</a>
-            <a href="/ril/links" class="hover:text-stone-900 dark:hover:text-stone-100 transition-colors">links</a>
-            <a href="/ril/til" class="hover:text-stone-900 dark:hover:text-stone-100 transition-colors">til</a>
+            <a href={`${base}/resources`} class="hover:text-stone-900 dark:hover:text-stone-100 transition-colors">resources</a>
+            <a href={`${base}/links`} class="hover:text-stone-900 dark:hover:text-stone-100 transition-colors">links</a>
+            <a href={`${base}/til`} class="hover:text-stone-900 dark:hover:text-stone-100 transition-colors">til</a>
           </nav>
           <a
             href="https://github.com/parmsam/ril"
@@ -98,7 +99,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
           <path fill-rule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zM9 5a1 1 0 11-2 0 1 1 0 012 0zM6.75 8a.75.75 0 000 1.5h.5v2.5h-.5a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-.5v-3.25A.75.75 0 008.5 8h-1.75z" clip-rule="evenodd" />
         </svg>
         <span>
-          This is real, ongoing curation — everything here is what I've actually read and saved, not sample data.
+          This is real, ongoing curation — everything here is something I've actually read, listened to, or watched and saved, not sample data.
           <a href="https://github.com/parmsam/ril#development" class="underline hover:text-stone-600 dark:hover:text-stone-300 transition-colors">Set up your own instance</a>.
         </span>
       </div>
@@ -112,7 +113,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       <div class="max-w-3xl mx-auto px-4 py-6 flex items-center justify-between text-xs text-stone-400 dark:text-stone-500">
         <span>sam's view of the internet</span>
         <div class="flex gap-4">
-          <a href="/ril/feed.xml" class="hover:text-stone-600 dark:hover:text-stone-300 transition-colors">rss</a>
+          <a href={`${base}/feed.xml`} class="hover:text-stone-600 dark:hover:text-stone-300 transition-colors">rss</a>
           <a href="https://github.com/parmsam/ril" class="hover:text-stone-600 dark:hover:text-stone-300 transition-colors">source</a>
         </div>
       </div>

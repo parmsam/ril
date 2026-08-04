@@ -1,14 +1,15 @@
 ---
 // Pagefind search — only active after `npm run build`
+const base = import.meta.env.BASE_URL;
 ---
 <div id="search" class="mb-8"></div>
-<script is:inline>
+<script is:inline define:vars={{ base }}>
   window.addEventListener('DOMContentLoaded', function () {
-    fetch('/ril/pagefind/pagefind-ui.js')
+    fetch(base + '/pagefind/pagefind-ui.js')
       .then(function (r) {
         if (!r.ok) throw new Error('not built yet');
         var s = document.createElement('script');
-        s.src = '/ril/pagefind/pagefind-ui.js';
+        s.src = base + '/pagefind/pagefind-ui.js';
         s.onload = function () {
           new PagefindUI({ element: '#search', showImages: false, resetStyles: false });
         };

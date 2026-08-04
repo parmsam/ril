@@ -2,7 +2,7 @@ import { getCollection } from 'astro:content';
 import type { APIRoute } from 'astro';
 
 export const GET: APIRoute = async ({ site }) => {
-  const base = site?.toString().replace(/\/$/, '') ?? '';
+  const base = (site?.toString().replace(/\/$/, '') ?? '') + import.meta.env.BASE_URL;
 
   const resources = await getCollection('resources');
   const links = await getCollection('links');
