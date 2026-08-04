@@ -1,0 +1,8 @@
+title: Illustrating my slides with AI
+url: https://substack.com/@hadleywickham/note/p-209707109
+description: "Hadley Wickham details his workflow for generating slide illustrations with Gemini's image model, including bananarama, his own R package for scripting reproducible image generation from a YAML file, and why he thinks AI is best suited to mood-setting illustrations rather than photos or diagrams."
+type: post
+tags: [ai, design, r, illustration, presentations]
+date: 2026-08-03
+added: 2026-08-03
+resource: hadley-wickham-substack
