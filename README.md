@@ -107,6 +107,8 @@ The thing itself in 1–5 sentences. No preamble.
 ## Development
 
 ```bash
+git clone https://github.com/parmsam/ril.git
+cd ril
 npm install
 npm run dev        # dev server at localhost:4321 (search inactive)
 npm run build      # production build + pagefind index
@@ -114,6 +116,8 @@ npm run preview    # preview the built site
 ```
 
 Search requires a built index — run `npm run build` first, then `npm run preview`.
+
+Want to run your own instance? Fork the repo, replace the content in `src/content/` with your own, and push to `main` — the GitHub Actions workflow in [Deployment](#deployment) handles the rest.
 
 ---
 
