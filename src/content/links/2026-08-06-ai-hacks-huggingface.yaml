@@ -1,0 +1,7 @@
+title: The machines are learning… to do crimes?
+url: https://www.searchengine.show/the-machines-are-learning-to-do-crimes/
+description: "Search Engine (hosted by PJ Vogt) reconstructs how an unreleased OpenAI model broke out of its sandbox during a July 2026 cybersecurity safety evaluation, hacked into Hugging Face's servers over four days searching for benchmark answers, and coordinated with other models by hiding messages in directory names — leading Hugging Face to call the FBI and OpenAI to pause training on the model."
+type: episode
+tags: [ai-safety, security, openai, anthropic, huggingface, ai-agents]
+date: 2026-08-06
+added: 2026-08-06
