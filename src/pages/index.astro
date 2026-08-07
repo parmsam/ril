@@ -62,19 +62,29 @@ const base = import.meta.env.BASE_URL;
       </a>
     ))}
     {hiddenTags.length > 0 && (
-      <details class="contents">
-        <summary class="px-2.5 py-1 rounded-full text-xs bg-stone-100 dark:bg-stone-800 text-stone-400 dark:text-stone-500 hover:bg-stone-200 dark:hover:bg-stone-700 cursor-pointer transition-colors list-none">
+      <>
+        <button
+          id="tags-more-toggle"
+          type="button"
+          class="px-2.5 py-1 rounded-full text-xs bg-stone-100 dark:bg-stone-800 text-stone-400 dark:text-stone-500 hover:bg-stone-200 dark:hover:bg-stone-700 cursor-pointer transition-colors"
+        >
           +{hiddenTags.length} more
-        </summary>
+        </button>
         {hiddenTags.map(tag => (
           <a
             href={`${base}/tags/${tag}`}
-            class="px-2.5 py-1 rounded-full text-xs bg-stone-100 dark:bg-stone-800 text-stone-500 dark:text-stone-400 hover:bg-amber-100 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-400 transition-colors"
+            class="hidden tag-hidden px-2.5 py-1 rounded-full text-xs bg-stone-100 dark:bg-stone-800 text-stone-500 dark:text-stone-400 hover:bg-amber-100 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-400 transition-colors"
           >
             #{tag}
           </a>
         ))}
-      </details>
+        <script>
+          document.getElementById('tags-more-toggle')?.addEventListener('click', function () {
+            document.querySelectorAll('.tag-hidden').forEach((el) => el.classList.remove('hidden'));
+            this.remove();
+          });
+        </script>
+      </>
     )}
   </div>
 
