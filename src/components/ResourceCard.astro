@@ -13,7 +13,7 @@ const { title, url, description, type, tags, status, note, ai_note } = resource.
 const base = import.meta.env.BASE_URL;
 ---
 
-<article id={resource.id} class="group p-4 rounded-lg border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 hover:border-amber-300 dark:hover:border-amber-700 hover:shadow-sm transition-all scroll-mt-16">
+<article class="group p-4 rounded-lg border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 hover:border-amber-300 dark:hover:border-amber-700 hover:shadow-sm transition-all">
   <div class="flex items-center justify-between gap-2 mb-2">
     <div class="flex items-center gap-2">
       <TypeBadge type={type} />
@@ -36,7 +36,7 @@ const base = import.meta.env.BASE_URL;
     </button>
   </div>
   <a href={url} target="_blank" rel="noopener noreferrer">
-    <h2 class="font-semibold text-stone-900 dark:text-stone-100 group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors mb-1 leading-snug">{title}</h2>
+    <h2 id={resource.id} class="font-semibold text-stone-900 dark:text-stone-100 group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors mb-1 leading-snug scroll-mt-16">{title}</h2>
     <span class="sr-only">{url}</span>
   </a>
   <p class="text-sm text-stone-500 dark:text-stone-400 leading-relaxed mb-3">

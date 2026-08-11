@@ -16,7 +16,7 @@ const pubStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric'
 const base = import.meta.env.BASE_URL;
 ---
 
-<article id={link.id} class="group flex gap-4 py-4 border-b border-stone-100 dark:border-stone-800 last:border-0 scroll-mt-16">
+<article class="group flex gap-4 py-4 border-b border-stone-100 dark:border-stone-800 last:border-0">
   <time class="flex-shrink-0 text-xs text-stone-400 dark:text-stone-500 pt-0.5 w-24 text-right tabular-nums">{addedStr}</time>
   <div class="flex-1 min-w-0">
     <div class="flex items-center gap-2 mb-1">
@@ -25,7 +25,7 @@ const base = import.meta.env.BASE_URL;
     </div>
     <div class="flex items-start gap-1.5 mb-1">
       <a href={url} target="_blank" rel="noopener noreferrer" class="flex-1 min-w-0">
-        <h2 class="font-medium text-stone-900 dark:text-stone-100 hover:text-amber-700 dark:hover:text-amber-400 transition-colors leading-snug">{title}</h2>
+        <h2 id={link.id} class="font-medium text-stone-900 dark:text-stone-100 hover:text-amber-700 dark:hover:text-amber-400 transition-colors leading-snug scroll-mt-16">{title}</h2>
         <span class="sr-only">{url}</span>
       </a>
       <button
