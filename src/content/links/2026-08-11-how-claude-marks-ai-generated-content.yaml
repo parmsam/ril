@@ -1,0 +1,7 @@
+title: How Claude marks AI-generated content
+url: https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content
+description: "Anthropic's help center article on its commitments under the EU AI Act's Article 50(2) Code of Practice: Claude models launched after August 2, 2026 will embed imperceptible watermarks in generated text and attach C2PA-signed provenance metadata to generated files, with detection tools to follow. Notes key limitations — a detected mark doesn't confirm full provenance, and a missing mark doesn't mean content wasn't AI-generated."
+type: post
+tags: [ai, anthropic, claude, policy, provenance]
+date: 2026-08-11
+added: 2026-08-11
