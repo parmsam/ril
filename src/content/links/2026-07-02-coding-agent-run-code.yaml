@@ -8,7 +8,7 @@ description: >-
 type: article
 tags: [ai, coding-agents, security, safety, agentic-ai]
 date: 2026-07-02
-added: 2026-07-02
+added: 2026-07-02T13:25
 note: >-
   The current state of the art described here — sandbox by default, then LLM
   review for anything the sandbox rejects — is what Posit Assistant just

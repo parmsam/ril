@@ -6,5 +6,5 @@ tags: [ai, ml, agents, research]
 date: 2026-06-08
 note: Strong on coordination cost — agents communicating and handing off work isn't free, and that overhead often swamps any gains from parallelism.
 resource: linear-digressions
-added: 2026-06-19
+added: 2026-06-19T14:23
 ai_note: true

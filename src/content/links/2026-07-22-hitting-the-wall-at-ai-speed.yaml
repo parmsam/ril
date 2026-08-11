@@ -10,5 +10,5 @@ description: >-
 type: article
 tags: [ai, coding-agents, cognitive-load, programmer-health, code-review]
 date: 2025-08-10
-added: 2026-07-22
+added: 2026-07-22T16:29
 note: Referenced in George Hotz's "I love LLMs, I hate hype" as a caution about AI-assisted coding increasing cognitive fatigue.

@@ -4,6 +4,6 @@ description: Applies Jevons Paradox to AI inference — per-token costs dropped 
 type: episode
 tags: [ai, agents, economics, llm, ml]
 date: 2026-06-22
-added: 2026-06-22
+added: 2026-06-22T17:24
 ai_note: true
 resource: linear-digressions

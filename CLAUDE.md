@@ -26,7 +26,7 @@ description: string        # 1–2 sentences
 type: article | video | post | paper | thread | tool | episode
 tags: [string]
 date: YYYY-MM-DD           # publication date (shown in card)
-added: YYYY-MM-DD          # date visited/saved (used for chronological sort)
+added: YYYY-MM-DDTHH:MM    # date/time visited/saved (no timezone offset; used for chronological sort — include time so same-day entries order correctly)
 note: string               # optional personal take
 ai_note: boolean           # optional — true (default) = AI-assisted note; false = written in own words
 resource: slug             # optional — parent resource slug
@@ -36,7 +36,7 @@ resource: slug             # optional — parent resource slug
 ```yaml
 ---
 title: string
-date: YYYY-MM-DD
+date: YYYY-MM-DDTHH:MM     # no timezone offset; used for chronological sort — include time so same-day entries order correctly
 tags: [string]
 source_url: URL            # optional
 source_title: string       # optional
@@ -53,7 +53,7 @@ description: string        # 1–2 sentences
 type: blog | podcast | channel | newsletter | tool | site
 tags: [string]
 status: active | archived  # default: active
-added: YYYY-MM-DD
+added: YYYY-MM-DDTHH:MM    # no timezone offset; used for chronological sort — include time so same-day entries order correctly
 note: string               # optional
 ai_note: boolean           # optional — true (default) = AI-assisted; false = own words
 ```
@@ -64,6 +64,7 @@ ai_note: boolean           # optional — true (default) = AI-assisted; false = 
 - **Notes/descriptions with colons**: If a `note` or `description` value contains a colon (e.g. `"The part that stuck: …"`), wrap the entire value in double quotes — `note: "…stuck: …"` — otherwise js-yaml parses the colon as a mapping separator.
 - **Values with both single and double quotes**: Use a YAML block scalar to avoid all quoting conflicts — `note: >-\n  text with "quotes" and it's fine: colons too`. The `>-` style folds newlines into spaces and strips the trailing newline.
 - **Numeric-looking tags**: A tag that's all digits (e.g. `911`) gets parsed as a YAML number, which fails the `tags: [string]` schema. Quote it — `tags: [ai, "911", policy]`.
+- **`added`/TIL `date` need a time component**: These fields drive the chronological sort, and the site sorts to the minute. Write them as `YYYY-MM-DDTHH:MM` (no timezone offset — treated as UTC, but display formatting is date-only so this is invisible). Date-only values default to midnight and can sort behind same-day entries that do have a time.
 
 ## Conventions
 
