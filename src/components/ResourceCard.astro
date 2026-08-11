@@ -37,6 +37,7 @@ const base = import.meta.env.BASE_URL;
   </div>
   <a href={url} target="_blank" rel="noopener noreferrer">
     <h2 class="font-semibold text-stone-900 dark:text-stone-100 group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors mb-1 leading-snug">{title}</h2>
+    <span class="sr-only">{url}</span>
   </a>
   <p class="text-sm text-stone-500 dark:text-stone-400 leading-relaxed mb-3">
     <AiIcon title="AI-generated description" />{description}

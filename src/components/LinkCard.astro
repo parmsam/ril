@@ -26,6 +26,7 @@ const base = import.meta.env.BASE_URL;
     <div class="flex items-start gap-1.5 mb-1">
       <a href={url} target="_blank" rel="noopener noreferrer" class="flex-1 min-w-0">
         <h2 class="font-medium text-stone-900 dark:text-stone-100 hover:text-amber-700 dark:hover:text-amber-400 transition-colors leading-snug">{title}</h2>
+        <span class="sr-only">{url}</span>
       </a>
       <button
         data-copy-href={`#${link.id}`}
