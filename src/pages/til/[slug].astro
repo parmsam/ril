@@ -29,9 +29,9 @@ const base = import.meta.env.BASE_URL;
         <span class="inline-block px-1.5 py-0.5 rounded text-xs font-medium bg-amber-50 text-amber-600">TIL</span>
         <time class="text-sm text-stone-400">{dateStr}</time>
       </div>
-      <h1 class="text-2xl font-bold text-stone-900 dark:text-stone-100 mb-3 leading-snug">{title}</h1>
+      <h1 class="text-2xl font-bold text-stone-900 dark:text-stone-100 mb-3 leading-snug break-words">{title}</h1>
       {source_url && (
-        <p class="text-sm text-stone-400">
+        <p class="text-sm text-stone-400 break-words">
           via <a href={source_url} class="text-amber-600 hover:underline underline-offset-2 transition-colors" target="_blank" rel="noopener noreferrer">{source_title ?? source_url}</a>
         </p>
       )}
@@ -55,7 +55,7 @@ const base = import.meta.env.BASE_URL;
       <span id="read-aloud-label" class="text-xs text-stone-400 dark:text-stone-500">Read aloud</span>
     </div>
 
-    <div id="til-body" class="prose prose-stone dark:prose-invert prose-sm max-w-none mb-8 prose-a:text-amber-600 dark:prose-a:text-amber-400 prose-a:no-underline hover:prose-a:underline">
+    <div id="til-body" class="prose prose-stone dark:prose-invert prose-sm max-w-none mb-8 break-words prose-a:text-amber-600 dark:prose-a:text-amber-400 prose-a:no-underline hover:prose-a:underline">
       <p class="not-prose flex items-center gap-1 text-xs text-stone-400 dark:text-stone-500 mb-4">
         {ai_note === false ? <PersonalIcon /> : <AiIcon />}
         {ai_note === false ? 'Written in my own words.' : 'AI-generated writing.'}
@@ -71,13 +71,13 @@ const base = import.meta.env.BASE_URL;
       {prev ? (
         <a href={`${base}/til/${prev.slug}`} class="group flex flex-col gap-0.5 max-w-[45%]">
           <span class="text-xs text-stone-400 dark:text-stone-500 group-hover:text-stone-500 dark:group-hover:text-stone-400 transition-colors">← older</span>
-          <span class="text-stone-600 dark:text-stone-300 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors leading-snug">{prev.data.title}</span>
+          <span class="text-stone-600 dark:text-stone-300 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors leading-snug break-words">{prev.data.title}</span>
         </a>
       ) : <span />}
       {next ? (
         <a href={`${base}/til/${next.slug}`} class="group flex flex-col gap-0.5 max-w-[45%] text-right ml-auto">
           <span class="text-xs text-stone-400 dark:text-stone-500 group-hover:text-stone-500 dark:group-hover:text-stone-400 transition-colors">newer →</span>
-          <span class="text-stone-600 dark:text-stone-300 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors leading-snug">{next.data.title}</span>
+          <span class="text-stone-600 dark:text-stone-300 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors leading-snug break-words">{next.data.title}</span>
         </a>
       ) : <span />}
     </nav>
