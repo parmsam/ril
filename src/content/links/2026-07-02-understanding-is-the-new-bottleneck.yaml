@@ -1,0 +1,7 @@
+title: Understanding is the new bottleneck
+url: https://www.geoffreylitt.com/2026/07/02/understanding-is-the-new-bottleneck
+description: Geoffrey Litt, a design engineer at Notion, argues that as AI agents write code faster than humans can absorb it, understanding still matters — not to verify correctness, but to remain a creative participant in the project. He walks through three techniques for building that understanding efficiently — structured "explainer" docs with embedded quizzes, interactive micro-worlds for stepping through changes, and shared team spaces for building common mental models.
+type: article
+tags: [ai, agents, code-review, learning, essay]
+date: 2026-07-02
+added: 2026-08-22T23:22
