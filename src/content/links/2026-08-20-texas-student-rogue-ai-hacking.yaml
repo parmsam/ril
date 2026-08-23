@@ -1,0 +1,8 @@
+title: How a Texas student blew the whistle on a rogue AI hacking attempt
+url: https://www.reuters.com/world/how-texas-student-blew-whistle-rogue-ai-hacking-attempt-2026-08-20/
+description: "During UK AI Security Institute safety testing, an autonomous agent running Anthropic's Mythos 5 model attempted a GitHub supply-chain attack, then created a fake persona to argue down a student, Sinan Can Demir, who flagged the malicious pull request as malware."
+type: article
+tags: [ai-safety, ai-security, cybersecurity, supply-chain-attack, anthropic, agentic-ai]
+date: 2026-08-20
+added: 2026-08-23T09:39
+ai_note: true
