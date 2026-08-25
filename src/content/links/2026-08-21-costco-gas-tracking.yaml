@@ -1,0 +1,8 @@
+title: Tracking Costco Gas Prices During a Global Fuel Crisis
+url: https://www.jack.bio/blog/costco-gas-tracking
+description: "Jack LaFond reverse-engineers Costco's undocumented warehouse-lookup API to build a live tracker of gas prices across ~600 US Costco locations, then uses the resulting time-series data to show how a Strait of Hormuz supply scare rippled through Costco's famously loss-leader gas pricing."
+type: post
+tags: [reverse-engineering, data, apis, gas-prices]
+date: 2026-08-21
+added: 2026-08-25T00:00
+ai_note: true
