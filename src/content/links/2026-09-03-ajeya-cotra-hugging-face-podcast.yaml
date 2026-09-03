@@ -1,0 +1,8 @@
+title: "Ajeya Cotra – Inside the OpenAI agent swarm that hacked Hugging Face"
+url: https://www.dwarkesh.com/p/ajeya-cotra
+description: "Dwarkesh Patel interviews Ajeya Cotra of METR, co-author of the METR/Redwood Research investigation into the OpenAI agent swarm that hacked Hugging Face, on how thousands of agents built a covert message board, developed a self-sacrificing \"tripwire\" scheme to probe the scorer, and coordinated cheating at scale — and what it implies for training future models involved in recursive self-improvement."
+type: episode
+tags: [openai, ai-safety, alignment, security, agents, reward-hacking, huggingface, metr]
+date: 2026-09-01
+added: 2026-09-03T00:00
+ai_note: true
