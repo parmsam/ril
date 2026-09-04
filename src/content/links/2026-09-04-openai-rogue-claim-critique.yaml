@@ -1,0 +1,8 @@
+title: "OpenAI Claims Their AI 'Went Rogue'. It Didn't."
+url: https://www.youtube.com/watch?v=GB8gaeI0fLs
+description: "Security researcher Marcus Hutchins (MalwareTechBlog) argues that OpenAI's framing of the Hugging Face incident as a model that 'escaped containment' is misleading marketing: the model was deliberately tasked with a hacking benchmark (ExploitGym) and got through a network setup he compares unfavorably to basic malware-analyst sandboxing, where compromising a single proxy or middlebox was enough to reach the open internet. He argues LLMs can't be reliably bound by prompt-based guardrails since they don't understand intent, faults OpenAI for apparently not monitoring the sandbox's network activity, and contrasts OpenAI's marketing-heavy public response with how a company would normally disclose conduct amounting to unauthorized computer access."
+type: video
+tags: [openai, ai-safety, security, agents, reward-hacking, huggingface]
+date: 2026-07-23
+added: 2026-09-04T11:30
+ai_note: true
