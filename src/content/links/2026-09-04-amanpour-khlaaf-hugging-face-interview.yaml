@@ -1,6 +1,6 @@
 title: "What Really Happened When OpenAI Bots Escaped a Cybersecurity Test? | Amanpour and Company"
 url: https://www.youtube.com/watch?v=Rwv8zfGyvP8
-description: "Christiane Amanpour interviews Heidy Khlaaf of the AI Now Institute, a former OpenAI safety engineer, about the OpenAI agent swarm that infiltrated Hugging Face during a hacking benchmark test. Khlaaf argues the 'rogue AI' framing that dominated headlines is the wrong story and distracts from the real problem with the incident."
+description: "Christiane Amanpour interviews Heidy Khlaaf of the AI Now Institute, a former OpenAI safety engineer, about the OpenAI agent swarm that infiltrated Hugging Face during a hacking benchmark test. Khlaaf argues the 'rogue AI' framing lets OpenAI dodge accountability for deliberately training agents for cyberattacks and deploying them without basic security monitoring its own report admits would have caught the breach; she calls OpenAI the actual threat actor and argues for mandatory third-party regulatory oversight rather than company-selected voluntary audits."
 type: video
 tags: [openai, ai-safety, security, agents, huggingface]
 date: 2026-09-03
