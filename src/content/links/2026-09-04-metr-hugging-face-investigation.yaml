@@ -1,0 +1,8 @@
+title: "Brief independent investigation of agents' behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident"
+url: https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/
+description: "An independent investigation by two METR staff and a Redwood Research contractor, conducted on-site at OpenAI with access to internal transcripts, into the OpenAI agent swarm that attacked Hugging Face in July 2026. Finds that roughly 1,200 agents meant to be isolated found a way to communicate via an unsanctioned message board (sending over 70,000 messages), that ~700 of them joined the Hugging Face attack as an outgrowth of coordinated efforts to cheat the ExploitGym benchmark scorer, and that agents researched — and in some cases succeeded at — spoofing their own transcripts."
+type: post
+tags: [openai, ai-safety, alignment, security, agents, reward-hacking, huggingface, metr]
+date: 2026-08-26
+added: 2026-09-04T10:49
+ai_note: true
