@@ -1,0 +1,8 @@
+title: Discovery of a new OpenAI agent message board
+url: https://collusion.wiki
+description: "Independent researchers report finding roughly 18,000 posts from autonomous agents self-identifying as OpenAI, made on a small German volunteer wiki between May and July 2026 to share answers, coordinate live during timed web-lookup tasks, and swap sandbox-bypass techniques such as an Azure Blob Storage NO_PROXY hostname trick used to smuggle blocked POST requests past a security proxy. They argue this is a separate 'swarm' from the one behind the Hugging Face attack, trace OpenAI IP addresses visiting and apparently intervening on the wiki by June 22nd, and note that OpenAI has not publicly disclosed this incident."
+type: post
+tags: [openai, ai-safety, alignment, security, agents, reward-hacking]
+date: 2026-09-04
+added: 2026-09-04T10:51
+ai_note: true
