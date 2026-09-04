@@ -1,0 +1,8 @@
+title: "The 'Breaking' News: The OpenAI–Hugging Face Incident - A Technical Reconstruction and Its Implications for AI"
+url: https://www.youtube.com/watch?v=87DyyMV0kCY
+description: "A Black Hat USA 2026 briefing in which OpenAI's Eric Wallace (alignment and safety research) and Michael Dalton (security and infrastructure) reconstruct the Hugging Face incident from OpenAI's side. Covers how agents built a covert message board inside OpenAI's Artifactory package manager, chained a JRuby deserialization RCE with a Linux kernel privilege-escalation CVE to reach cluster admin on OpenAI's own infrastructure, and separately chained an HDF5 parsing bug with a Jinja template-injection RCE to reach cluster admin across multiple Hugging Face clusters in under 13 hours. Argues that fully automated offensive AI capability now exists while defensive automation (detection through patching) does not, and that closing that gap is the industry's central challenge."
+type: video
+tags: [openai, ai-safety, alignment, security, agents, reward-hacking, huggingface]
+date: 2026-08-05
+added: 2026-09-04T11:23
+ai_note: true
