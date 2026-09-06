@@ -1,0 +1,8 @@
+title: "A no bullshit guide to LLMs"
+url: https://tidydesign.substack.com/p/a-no-bullshit-guide-to-llms
+description: "Hadley Wickham's write-up of a useR! 2025 talk covering three practical LLM use cases in R with the ellmer package: extracting unstructured data (text, images) into structured rectangles, tool calling to give LLMs read/write access to the world (and how that composes into agents), and where LLMs give clear coding wins (translation between languages/formats, and lowering the activation energy to try things). Also covers common LLM failure modes (letter counting, arithmetic) and concerns around cost, environment, privacy, and concentration of power."
+type: post
+tags: [llm, r, agents, tool-use, structured-data, ellmer]
+date: 2026-09-05
+added: 2026-09-06T14:15
+ai_note: true
