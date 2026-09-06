@@ -1,0 +1,18 @@
+---
+title: "AI text watermarks pick words with a single-elimination tournament, not a tag"
+date: 2026-09-06T15:30
+tags:
+  - anthropic
+  - watermarking
+  - llm
+  - google-deepmind
+  - synthid
+source_url: https://lineardigressions.substack.com/p/understanding-ai-text-watermarking
+source_title: "Understanding AI Text Watermarking"
+---
+
+SynthID Text (the Google DeepMind technique Anthropic's Claude watermark is based on) doesn't tag output or hide invisible characters — it biases which token gets picked at each generation step. A private key plus the last few tokens of context seeds a random number generator, which produces a series of vectors of 0s and 1s. Each vector runs a single-elimination bracket over the candidate next-tokens: a token paired against a rival wins if it has a 1 where the rival has a 0, ties are broken by coin flip, and the survivor advances to the next round.
+
+SynthID Text runs this bracket 30 levels deep per token, each level re-seeded from the previous 4 tokens. The winning token is still just a normal, plausible completion — the overall distribution of outputs is unchanged by the bias — but the specific sequence of coin-flip-like wins across those 30 rounds leaves a faint statistical fingerprint that a detector can check for, given the same private key.
+
+Because each token only carries a weak signal, detection has to accumulate it across many tokens: at ~400 tokens (roughly a page), true-positive detection reaches 80–90% at a 1% false-positive rate, but at 20–30 tokens there's not enough signal to say much. The bracket also needs multiple plausible candidates to bias between, so low-entropy text (like "the capital of France is ___") carries almost no watermark signal, while high-entropy, open-ended text carries a strong one.
