@@ -1,0 +1,9 @@
+title: "Understanding AI Text Watermarking"
+url: https://lineardigressions.substack.com/p/understanding-ai-text-watermarking
+description: "Linear Digressions breaks down the mechanism behind Anthropic's Claude text watermark, based on Google DeepMind's SynthID Text (Nature, 2024): rather than tagging output or hiding invisible characters, it biases token-by-token sampling via a tournament-style selection driven by random functions seeded from a private key, leaving a statistical signature that accumulates over many tokens without changing the overall output distribution. Also covers why detection reliability depends on text length and entropy, and how heavy editing weakens the signal."
+type: episode
+tags: [anthropic, watermarking, llm, google-deepmind, synthid, ai-safety]
+date: 2026-08-24
+added: 2026-09-06T15:00
+ai_note: true
+resource: linear-digressions
