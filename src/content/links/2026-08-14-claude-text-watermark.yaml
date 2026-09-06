@@ -1,0 +1,8 @@
+title: "How Claude's text watermarking works"
+url: https://www.anthropic.com/news/claude-text-watermark
+description: "Anthropic's own explainer on its Claude text watermark, a version of Google DeepMind's SynthID-Text: it doesn't add hidden characters but instead uses a key plus preceding context to bias which random number settles low-stakes word choices, leaving a pattern detectable only to someone with the key. Covers why it doesn't affect output quality, why it's sparser on factual text and code, why it's implemented across major AI providers under the EU AI Act, and its detection limitations."
+type: post
+tags: [anthropic, watermarking, llm, google-deepmind, synthid, policy]
+date: 2026-08-14
+added: 2026-09-06T16:00
+ai_note: true
