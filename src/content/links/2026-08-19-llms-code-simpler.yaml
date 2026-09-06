@@ -1,0 +1,8 @@
+title: "Why LLMs can't make your code simpler"
+url: https://www.answer.ai/posts/2026-08-19-llms-code-simpler.html
+description: "Pol Alvarez Vecino (Answer.AI) applies Peter Naur's 'Programming as Theory Building' to LLM coding: the real program is the Theory held in engineers' minds, not the code, so LLMs can't reduce complexity that isn't measurable in the code itself. Illustrates with Answer.AI's own Stripe billing redesign for Solveit, where they chose a simpler 'Theory' (charge a saved card manually or automatically) over Stripe's more capable but more complex managed-subscription model, even when an LLM later suggested reverting to subscriptions to fix an edge case in India."
+type: article
+tags: [llms, software-design, code-quality, complexity]
+date: 2026-08-19
+added: 2026-09-05T22:32
+ai_note: true
