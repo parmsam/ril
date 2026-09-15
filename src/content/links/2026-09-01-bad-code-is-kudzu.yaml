@@ -1,0 +1,8 @@
+title: "Bad code is kudzu"
+url: https://vickiboykis.com/2026/09/01/bad-code-is-kudzu/
+description: "Vicki Boykis argues that codebases need aggressive, deliberate pruning of unused features, using her own removal of an ML-generated hashtag bubble feature (added in May, unused per her analytics) as an example. She contends this discipline matters more now, since AI tools make it trivially easy to keep adding features and generate 'kudzu slop' that overtakes a codebase."
+type: post
+tags: [software-craft, engineering-culture, code-quality, ai]
+date: 2026-09-01
+added: 2026-09-15T18:45
+ai_note: true
