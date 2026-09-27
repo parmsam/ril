@@ -1,0 +1,7 @@
+title: The GitHub wiki is an anti-pattern
+url: https://michaelheap.com/github-wiki-is-an-antipattern/
+description: Argues that GitHub's wiki feature is worse than a /docs folder for project documentation, since a docs folder gets versioned alongside code, reviewed via pull requests, linted in CI, and is available offline when a repo is cloned.
+type: post
+tags: [documentation, github, software-craft, devtools]
+date: 2022-01-23
+added: 2026-09-27T15:55
