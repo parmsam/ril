@@ -1,0 +1,9 @@
+title: The Brain Sandwich
+url: https://terriblesoftware.org/2026/10/02/the-brain-sandwich/
+description: A short post on a simple framework for AI-assisted coding, credited to an engineer on the author's team — brain, then AI, then brain — so engineers delegate implementation without letting their judgment atrophy.
+type: post
+tags: [ai, coding-agents, software-engineering, code-review]
+date: 2026-10-02
+added: 2026-10-18T12:10
+note: >-
+  The first "brain" step is understanding the problem well enough to judge the agent's output, since without it AI can steer toward the wrong problem entirely. The last step is making the work reviewable before it reaches anyone else: read the diff, question whether the complexity is earned, and write a real PR description. The rule of thumb is that if you can't explain what changed and why, it isn't ready for review.

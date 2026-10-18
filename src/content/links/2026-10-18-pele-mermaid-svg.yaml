@@ -1,0 +1,9 @@
+title: Pele — Mermaid diagrams as themeable SVG
+url: https://pele.run
+description: A lightweight open source library that renders Mermaid diagram syntax to SVG, themed with CSS variables so colors and fonts change without re-rendering.
+type: tool
+tags: [mermaid, diagrams, svg, javascript, open-source]
+date: 2026-10-18
+added: 2026-10-18T12:12
+note: >-
+  The site's comparison against Mermaid.js claims a 230 kB gzipped bundle versus 1.6 MB, sub-millisecond render times, zero direct dependencies, and layouts that adapt on small screens rather than just scaling down. Usage is a single render() call that returns an SVG string.
