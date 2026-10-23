@@ -1,0 +1,9 @@
+title: What is slop?
+url: https://substack.hadley.nz/p/what-is-slop
+description: Hadley Wickham defines slop as AI output that carries zero human thinking, contrasting a fully delegated AI video about genzplyr with a later one where he shaped the content, design, and voiceover himself.
+type: post
+tags: [ai, slop, generative-ai, video, r, craft]
+date: 2026-10-23
+added: 2026-10-23T14:22
+note: >-
+  The test is where the intellectual effort comes from, not how polished the output looks — and AI breaks the old heuristic that slick work implied someone cared. Sharing slop is fine under two rules: it must never sit on anyone's critical path, and it must be labelled as slop upfront. AI-generated downstream PRs are treated as "semi-slop": opened as drafts with a provenance statement and reviewed before being marked ready. The non-slop recipe is forcing human review of a content outline and storyboard, picking the visual style (Bauhaus), and recording one's own voice instead of using TTS.
