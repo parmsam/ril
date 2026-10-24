@@ -78,6 +78,7 @@ ai_note: boolean           # optional — true (default) = AI-assisted; false = 
   1. defuddle: `curl -s https://defuddle.md/example.com/post` (strip `https://` from the target URL)
   2. Jina Reader: `curl -s https://r.jina.ai/https://example.com/post`
   3. WebFetch tool
+  4. Wayback Machine snapshot + local defuddle CLI — when the site 403s/captchas all of the above. Recipe in the `defuddle-cli` skill ("Archive fallback"). Don't pass archive URLs through defuddle.md or Jina; both block web.archive.org.
 
 - **Local page archive**: After fetching, always save the raw markdown to `ref-sources/YYYY-MM-DD-slug.md` (matching the content file slug). This directory is gitignored — it's a local-only archive in case the original URL goes down. When writing descriptions or notes, pull from the saved local copy rather than re-fetching.
 - **Commit and push on completion**: After finishing a TIL, link, or resource, commit and push without waiting to be asked.
