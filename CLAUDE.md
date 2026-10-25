@@ -74,6 +74,7 @@ ai_note: boolean           # optional — true (default) = AI-assisted; false = 
 - **Link vs TIL**: A Link points to an external piece of content. A TIL is a short learned fact written in first person from reading that content.
 - **Link vs Resource**: A Resource is the home of something ongoing (a blog, podcast, newsletter). A Link is a single piece from it.
 - **Slugs**: lowercase, hyphens only, max ~5 words.
+- **YouTube URLs**: Use the `youtube-fetch` skill (`python3 -I .claude/skills/youtube-fetch/yt_fetch.py <url> ref-sources/YYYY-MM-DD-slug.md`), not the chain below. It gets the title, channel, date, description, chapters, and transcript via yt-dlp.
 - **Fetching content**: Wait 2 seconds before the first request (`sleep 2`) to respect defuddle's rate limit, then use this fallback chain to get clean markdown from a URL:
   1. defuddle: `curl -s https://defuddle.md/example.com/post` (strip `https://` from the target URL)
   2. Jina Reader: `curl -s https://r.jina.ai/https://example.com/post`
