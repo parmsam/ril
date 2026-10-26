@@ -29,7 +29,7 @@ const base = import.meta.env.BASE_URL;
         <span class="sr-only">{url}</span>
       </a>
       <button
-        data-copy-href={`#${link.id}`}
+        data-copy-href={`${base}/links#${link.id}`}
         aria-label="Copy link to this entry"
         class="flex-shrink-0 mt-0.5 opacity-0 group-hover:opacity-100 focus:opacity-100 p-0.5 rounded text-stone-400 hover:text-stone-600 dark:text-stone-500 dark:hover:text-stone-300 transition-opacity"
       >

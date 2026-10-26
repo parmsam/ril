@@ -42,6 +42,9 @@ for (const item of feed) {
 }
 const hiddenTags = allTags.filter(t => !recentTags.includes(t));
 const base = import.meta.env.BASE_URL;
+
+const HOME_FEED_LIMIT = 50;
+const homeFeed = feed.slice(0, HOME_FEED_LIMIT);
 ---
 
 <Base>
@@ -89,10 +92,19 @@ const base = import.meta.env.BASE_URL;
   </div>
 
   <div>
-    {feed.map(item => {
+    {homeFeed.map(item => {
       if (item.kind === 'resource') return <div class="mb-4"><ResourceCard resource={item.entry} /></div>;
       if (item.kind === 'link') return <LinkCard link={item.entry} />;
       if (item.kind === 'til') return <TilCard entry={item.entry} />;
     })}
   </div>
+
+  {feed.length > HOME_FEED_LIMIT && (
+    <div class="mt-10 pt-6 border-t border-stone-200 dark:border-stone-800 text-sm text-stone-400 dark:text-stone-500">
+      Showing the latest {HOME_FEED_LIMIT} of {feed.length}. See all
+      <a href={`${base}/links`} class="text-stone-600 dark:text-stone-300 underline underline-offset-2 hover:text-amber-700 dark:hover:text-amber-400 transition-colors">{links.length} links</a>,
+      <a href={`${base}/til`} class="text-stone-600 dark:text-stone-300 underline underline-offset-2 hover:text-amber-700 dark:hover:text-amber-400 transition-colors">{tils.length} TILs</a>, or
+      <a href={`${base}/resources`} class="text-stone-600 dark:text-stone-300 underline underline-offset-2 hover:text-amber-700 dark:hover:text-amber-400 transition-colors">{resources.length} resources</a>.
+    </div>
+  )}
 </Base>
