@@ -119,6 +119,35 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       </div>
     </footer>
 
+    <button
+      id="back-to-top"
+      type="button"
+      aria-label="Back to top"
+      class="hidden fixed bottom-6 right-6 z-10 p-2.5 rounded-full border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 text-stone-400 dark:text-stone-500 shadow-sm hover:text-amber-600 dark:hover:text-amber-400 hover:border-amber-300 dark:hover:border-amber-700 transition-colors cursor-pointer"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+        <path fill-rule="evenodd" d="M10 17a.75.75 0 01-.75-.75V5.612L5.29 9.77a.75.75 0 01-1.08-1.04l5.25-5.5a.75.75 0 011.08 0l5.25 5.5a.75.75 0 11-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0110 17z" clip-rule="evenodd"/>
+      </svg>
+    </button>
+
+    <script is:inline>
+      (function () {
+        var btn = document.getElementById('back-to-top');
+        var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+        function update() {
+          btn.classList.toggle('hidden', window.scrollY < window.innerHeight);
+        }
+
+        update();
+        window.addEventListener('scroll', update, { passive: true });
+
+        btn.addEventListener('click', function () {
+          window.scrollTo({ top: 0, behavior: reduceMotion.matches ? 'auto' : 'smooth' });
+        });
+      })();
+    </script>
+
     <script is:inline>
       (function () {
         document.querySelectorAll('[data-copy-href]').forEach(function (btn) {
