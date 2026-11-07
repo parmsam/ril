@@ -1,0 +1,9 @@
+title: The 0rwx Framework
+url: https://www.youtube.com/watch?v=E6-1u_savRs
+description: "Tris Oaten of No Boilerplate proposes 0rwx, a four-level label for AI involvement in creative and technical work modeled on Unix permissions: 0 (deny, no AI access), r (AI reads and advises only), w (AI makes isolated changes the author can still check), and x (fully agentic, opaque generation). The levels are defined by how well the author can scrutinize the output, not by which tool was used."
+type: video
+tags: [ai, vibe-coding, ethics, software, automation]
+date: 2026-11-07
+added: 2026-11-07T13:49
+note: >-
+  The argument leans on Lisanne Bainbridge's 1983 paper "Ironies of Automation": as automation nears perfection, operators grow complacent and their skills atrophy, so the claim "I read the code" becomes unreliable at high levels of agentic AI use. Pairs with Benn Jordan's call for standardized self-rating of vibe-coded software.
