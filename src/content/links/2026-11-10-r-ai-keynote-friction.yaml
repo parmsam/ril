@@ -1,0 +1,10 @@
+title: "Friction Worth Keeping: What Keeps Us Human When AI Makes Everything Easy"
+url: https://www.andrewheiss.com/blog/2026/11/10/r-ai-keynote-friction/
+description: >-
+  Andrew Heiss's keynote for the R Consortium's 2026 R + AI conference separates incidental friction (regex escaping, roxygen boilerplate, reference cleanup) from formative friction, the messy middle of the "design squiggle" where skills, taste, judgment, and trust develop. LLMs let people skip from idea to polished output, and they can't tell the two kinds of friction apart.
+type: article
+tags: [ai, llm, education, learning, r, academia]
+date: 2026-11-10
+added: 2026-11-13T11:15
+note: >-
+  Opens with peer-reviewing a paper whose revision had been fully rewritten by Claude, with hypotheses reversed and new data and methods. Extends Ted Chiang's "forklift in the weight room" line: forklifts are great in the warehouse, operators must recertify every three years, so the task questions become gym (keep the friction), warehouse (use the LLM), or recertification (relearn skills that have atrophied).

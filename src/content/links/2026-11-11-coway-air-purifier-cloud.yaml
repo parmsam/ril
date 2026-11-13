@@ -1,0 +1,10 @@
+title: Reverse Engineering My Coway Air Purifier to Ditch the Cloud
+url: https://scottjg.com/posts/2026-11-11-reverse-engineering-my-coway-air-purifier-to-ditch-the-cloud/
+description: >-
+  A walkthrough of cutting a Coway Airmega IconS off Coway's flaky IoCare cloud: a Raspberry Pi man-in-the-middle setup, decoding the MQTT control channel and the encrypted Bluetooth provisioning protocol, and ending with a local Home Assistant integration bridged to Apple Home.
+type: post
+tags: [iot, reverse-engineering, home-assistant, security, ai, right-to-repair]
+date: 2026-11-11
+added: 2026-11-13T11:16
+note: >-
+  The fan fetches its root CA certificate over plain HTTP, so it was always MitM-able, and the Bluetooth setup payload carries the CA and cert-server URLs, so pointing them at a local server removes the need for any proxy. LLMs did much of the grunt work, building the MitM environment and reconstructing the BLE protocol from Android debug logs in about 20 minutes. Claude refused to write the traffic-redirect rules and ChatGPT did them instead.
