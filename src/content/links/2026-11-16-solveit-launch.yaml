@@ -1,0 +1,10 @@
+title: Announcing the Public Launch of SolveIt
+url: https://www.fast.ai/posts/2026-11-16-solveit-launch/
+description: >-
+  Jeremy Howard and Rachel Thomas announce the public launch of SolveIt, Answer.AI's internal tool where code, notes, documents and AI share one editable "dialog" on a persistent server, built around the idea that understanding can't be outsourced.
+type: post
+tags: [ai, tools, learning, programming, literate-programming]
+date: 2026-11-16
+added: 2026-11-16T20:31
+note: >-
+  The central design choice is that prompts can be inserted anywhere in a dialog and the AI only sees what comes before, and its responses can be edited directly, so context stays curated rather than polluted by back-and-forth. The case study contrasts a colour-palette generator built in Claude Code, which worked but which its author couldn't explain or stand behind, with a SolveIt rebuild in small steps where every choice had a stated reason. Pay-as-you-go pricing after two years with 3,000 preview users.
